@@ -1,4 +1,4 @@
-from python.src.Controller import ParamSetController
+from .Controller import ParamSetController
 
 
 class Application(object):
