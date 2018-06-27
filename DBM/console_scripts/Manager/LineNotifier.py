@@ -5,7 +5,7 @@ import requests
 
 class LINEUIManager(object):
     """
-    Line interaction
+    Line Notification
     """
 
     def __init__(self):
