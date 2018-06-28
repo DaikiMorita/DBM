@@ -4,6 +4,7 @@ import collections
 import configparser
 import numpy as np
 import random
+import DBM.console_scripts.Viewer.Viewer as v
 
 
 class PreProcessManager(object):
@@ -12,7 +13,7 @@ class PreProcessManager(object):
     """
 
     def __init__(self):
-        pass
+        self.viewer = v.Viewer()
 
     def z_score_normalization(self, data_array):
         """
@@ -30,22 +31,27 @@ class PreProcessManager(object):
 
         return np.array([d / s for d, s in zip(data_minus_average, sigma)])
 
-    def make_mini_batch(self, data_array, mini_batch_size):
+    def make_mini_batch(self, data_list, mini_batch_size):
         """
-        makes mini bathes with data_array
-        :param data_array:
-        :return:2d-list
+        makes mini bathes from list-type data_array
+        :param data_list: 2-d list
+        :param mini_batch_size: size of mini batches
+        :return:3d-list. A returned list will contain mini batches.
+        Each batch will contain lists as you specified at the parameter.
         """
 
         # Now that data_array was shuffled,
         # mini batches will contain data with a different label at the almost same rate, statistically,
         # even when mini batches are made by extracting data from the top of the list 'data_array'
 
-        data_array_length = len(data_array)
+        data_array_length = len(data_list)
         rest = data_array_length % mini_batch_size
 
-        mini_batches = [data_array[i:i + mini_batch_size] for i in
+        mini_batches = [data_list[i:i + mini_batch_size] for i in
                         range(0, data_array_length - rest, mini_batch_size)]
+
+        rest_batch = data_list[data_array_length - rest:] + data_list[0:mini_batch_size - rest]
+        mini_batches.append(rest_batch)
 
         return mini_batches
 

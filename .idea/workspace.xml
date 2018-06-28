@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/DBM/console_scripts/Manager/LoggingManager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBM/console_scripts/Manager/SamplingManager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBM/console_scripts/Model/Params.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBM/console_scripts/Model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBM/console_scripts/Manager/GaussianBernoulliRBM.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBM/console_scripts/Manager/GaussianBinaryRBM.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DBM/console_scripts/Manager/LineNotifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/console_scripts/Manager/LineNotifier.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBM/console_scripts/Manager/PreProcessManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/console_scripts/Manager/PreProcessManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,17 +21,17 @@
       <file leaf-file-name="Application.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PreProcessManager.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PreProcessManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/PreProcessManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+            <state relative-caret-position="225">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
               <folding>
                 <element signature="e#16#34#0" expanded="true" />
               </folding>
@@ -41,10 +39,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PreProcessManagerTest.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Viewer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Viewer/Viewer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreProcessManagerTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
+            <state relative-caret-position="165">
               <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -53,21 +60,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Params.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Model/Params.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="LoggingManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/LoggingManager.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
+      <file leaf-file-name="GaussianBernoulliRBM.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/GaussianBernoulliRBM.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+              <folding>
+                <element signature="e#16#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LineNotifier.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/LineNotifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            <state relative-caret-position="240">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding>
                 <element signature="e#15#24#0" expanded="true" />
               </folding>
@@ -118,16 +132,18 @@
         <option value="$PROJECT_DIR$/DBM/console_scripts/Application.py" />
         <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/SamplingManager.py" />
         <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/LoggingManager.py" />
-        <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/LineNotifier.py" />
         <option value="$PROJECT_DIR$/DBM/console_scripts/Model/Params.py" />
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py" />
+        <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/GaussianBinaryRBM.py" />
+        <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/GaussianBernoulliRBM.py" />
+        <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/LineNotifier.py" />
         <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/PreProcessManager.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2048" />
-    <option name="y" value="54" />
+    <option name="x" value="2162" />
+    <option name="y" value="52" />
     <option name="width" value="1398" />
     <option name="height" value="992" />
   </component>
@@ -145,6 +161,11 @@
             <path>
               <item name="DBM" type="b2602c69:ProjectViewProjectNode" />
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DBM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name=".circleci" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DBM" type="b2602c69:ProjectViewProjectNode" />
@@ -196,6 +217,13 @@
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="ControllerTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DBM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="ManagerTest" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -240,6 +268,19 @@
       <option name="_new_target" value="&quot;PreProcessManagerTest.PreProcessManagerTest&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
+    <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="DBM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DBM/test/ManagerTest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
     <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_z_score_normalization" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="DBM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -256,10 +297,12 @@
     <list>
       <item itemvalue="Python tests.Unittests for PreProcessManagerTest.PreProcessManagerTest.test_z_score_normalization" />
       <item itemvalue="Python tests.Unittests for PreProcessManagerTest.PreProcessManagerTest" />
+      <item itemvalue="Python tests.Unittests for PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Unittests for PreProcessManagerTest.PreProcessManagerTest" />
+        <item itemvalue="Python tests.Unittests for PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch" />
         <item itemvalue="Python tests.Unittests for PreProcessManagerTest.PreProcessManagerTest.test_z_score_normalization" />
       </list>
     </recent_temporary>
@@ -278,47 +321,47 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_z_score_normalization - 2018.06.28 at 00h 01m 12s.xml">
-      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_z_score_normalization" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_z_score_normalization - 2018.06.28 at 00h 01m 57s.xml">
-      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_z_score_normalization" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_z_score_normalization - 2018.06.28 at 00h 04m 44s.xml">
-      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_z_score_normalization" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_z_score_normalization - 2018.06.28 at 00h 08m 45s.xml">
-      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_z_score_normalization" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_z_score_normalization - 2018.06.28 at 00h 12m 06s.xml">
-      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_z_score_normalization" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_z_score_normalization - 2018.06.28 at 00h 15m 00s.xml">
-      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_z_score_normalization" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_z_score_normalization - 2018.06.28 at 00h 18m 27s.xml">
-      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_z_score_normalization" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_z_score_normalization - 2018.06.28 at 00h 28m 16s.xml">
-      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_z_score_normalization" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_z_score_normalization - 2018.06.28 at 00h 28m 39s.xml">
-      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_z_score_normalization" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest - 2018.06.28 at 00h 31m 27s.xml">
+      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_make_mini_batch - 2018.06.28 at 23h 18m 16s.xml">
+      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_make_mini_batch - 2018.06.28 at 23h 18m 42s.xml">
+      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_make_mini_batch - 2018.06.28 at 23h 19m 16s.xml">
+      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_make_mini_batch - 2018.06.28 at 23h 19m 41s.xml">
+      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_make_mini_batch - 2018.06.28 at 23h 20m 09s.xml">
+      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_make_mini_batch - 2018.06.28 at 23h 21m 32s.xml">
+      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_make_mini_batch - 2018.06.28 at 23h 25m 11s.xml">
+      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest - 2018.06.28 at 23h 25m 13s.xml">
+      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest - 2018.06.28 at 23h 33m 30s.xml">
       <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2048" y="54" width="1398" height="992" extended-state="0" />
+    <frame x="2162" y="52" width="1398" height="992" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23390558" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23390558" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.49436936" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38063064" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -337,10 +380,60 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Model/Params.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/LoggingManager.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/LineNotifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <element signature="e#15#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Controller/ParamSetController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/PreProcessManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <element signature="e#16#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Application.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -386,41 +479,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/GaussianBinaryRBM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Controller/LogController.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Viewer/Viewer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/ExfileManager.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/PostProcessManager.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/LoggingManager.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/LineNotifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <element signature="e#15#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Model/Params.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -432,29 +498,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.circleci/circle.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py">
+    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        <state relative-caret-position="630">
+          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/GaussianBinaryRBM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="339" column="38" selection-start-line="339" selection-start-column="38" selection-end-line="339" selection-end-column="38" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#16#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/LineNotifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <element signature="e#15#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/PreProcessManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="225">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
             <element signature="e#16#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/GaussianBernoulliRBM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+          <folding>
+            <element signature="e#16#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/LoggingManager.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Viewer/Viewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

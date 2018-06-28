@@ -3,7 +3,7 @@ import os
 import requests
 
 
-class LINEUIManager(object):
+class LineNotifier(object):
     """
     Line Notification
     """
@@ -14,7 +14,7 @@ class LINEUIManager(object):
     def send_line(self, message, path_file=""):
         """
         sends a line to me
-        :return:
+        :return: None
         """
 
         line_notify_token = 'XsRTUJeMtkozOo3wV3BV2BKi0fGe2dLaMQt7GY3mzSR'

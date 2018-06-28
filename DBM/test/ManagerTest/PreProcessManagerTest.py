@@ -24,3 +24,31 @@ class PreProcessManagerTest(unittest.TestCase):
         actual = pre_process_manager.z_score_normalization(arr)
 
         npt.assert_array_almost_equal(expected, actual)
+
+    def test_make_mini_batch(self):
+        """
+        test of making mini batches from 2-d list
+        :return: None
+        """
+
+        pre_process_manager = PreProcessManager.PreProcessManager()
+
+        # 2-d list
+        data_list = [[1, 1, 1],
+                     [2, 2, 2],
+                     [3, 3, 3],
+                     [4, 4, 4],
+                     [5, 5, 5],
+                     [6, 6, 6],
+                     [7, 7, 7],
+                     [8, 8, 8],
+                     [9, 9, 9],
+                     [10, 10, 10],
+                     ]
+        # makes mini batches with 3 elements
+        expected = [[[1, 1, 1], [2, 2, 2], [3, 3, 3]], [[4, 4, 4], [5, 5, 5], [6, 6, 6]],
+                    [[7, 7, 7], [8, 8, 8], [9, 9, 9]], [[10, 10, 10], [1, 1, 1], [2, 2, 2]]]
+
+        actual = pre_process_manager.make_mini_batch(data_list, 3)
+
+        self.assertEqual(expected, actual)
