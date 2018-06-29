@@ -48,8 +48,6 @@ jobs:
           name: run tests
           command:
               python setup.py test
-            # . venv/bin/activate
-            # python manage.py test
 
       - store_artifacts:
           path: test-reports

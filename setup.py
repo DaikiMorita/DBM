@@ -1,8 +1,7 @@
 from setuptools import setup, find_packages
 import sys
 
-sys.path.append('.DBM/src')
-sys.path.append('.DBM/test')
+sys.path.append('./DBM/test')
 
 setup(
     name="Deep Boltzmann Machine",
