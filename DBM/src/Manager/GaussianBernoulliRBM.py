@@ -1,7 +1,7 @@
 # coding=utf-8
 
-import DBM.console_scripts.Manager.LineNotifier as ln
-import DBM.console_scripts.Viewer.Viewer as v
+import DBM.src.Manager.LineNotifier as ln
+import DBM.src.Viewer.Viewer as v
 import tqdm
 import numpy as np
 import warnings

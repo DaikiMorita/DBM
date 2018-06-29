@@ -1,7 +1,5 @@
 import unittest
-from DBM.test.ControllerTest import *
 from DBM.test.ManagerTest import PreProcessManagerTest
-from DBM.test.ViewerTest import *
 
 
 def suite():

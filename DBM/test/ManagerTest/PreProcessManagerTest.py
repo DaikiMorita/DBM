@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 import numpy.testing as npt
-from DBM.console_scripts.Manager import PreProcessManager
+from DBM.src.Manager import PreProcessManager
 
 
 class PreProcessManagerTest(unittest.TestCase):

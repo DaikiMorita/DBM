@@ -1,7 +1,7 @@
 # coding=utf-8
 
 import numpy as np
-import DBM.console_scripts.Viewer.Viewer as v
+import DBM.src.Viewer.Viewer as v
 
 
 class PreProcessManager(object):
