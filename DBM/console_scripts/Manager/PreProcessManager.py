@@ -1,9 +1,6 @@
 # coding=utf-8
 
-import collections
-import configparser
 import numpy as np
-import random
 import DBM.console_scripts.Viewer.Viewer as v
 
 
