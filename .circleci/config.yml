@@ -47,6 +47,8 @@ jobs:
       # https://nose.readthedocs.io
       - run:
           name: run tests
+            pipenv install numpy
+            n
           command:
               python setup.py test
 
