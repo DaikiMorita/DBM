@@ -1,5 +1,4 @@
 # coding=utf-8
-
 import DBM.src.Manager.LineNotifier as ln
 import DBM.src.Viewer.Viewer as v
 import tqdm
@@ -24,7 +23,7 @@ class GaussianBernoulliRBM(object):
 
         # Generates objects
         self.viewer = v.Viewer()
-        self.line_ui_manager = ln.LineNotifier
+        self.line_notifier = ln.LineNotifier
 
         # Parameters
         self.mini_batches = mini_batches
@@ -41,7 +40,6 @@ class GaussianBernoulliRBM(object):
         self.width_spread_function = width_sf
         self.height_spread_function = height_sf
         self.dir_for_saving_result = dir_for_saving_result
-
         side_len_img = int(math.sqrt(num_visible_units))
         self.spread_funcs = np.array(
             [self.spread_function((side_len_img, side_len_img),
@@ -54,15 +52,11 @@ class GaussianBernoulliRBM(object):
                 np.uint8(np.reshape(sf * 255, (side_len_img, side_len_img)))).save(os.path.join('SF', '%s.jpg' % index))
         """
 
-    def Learning(self):
+    def contrastive_divergence_learning(self):
 
         """
-       Contrastive Divergence Learning
-       :param eta:learning rate
-       :param mu: rate of change of momentum
-       :param num_gibbs_sampling: number_of gibbs_sampling
-       :param epoch: epoch:number of iteration
-       :return: Learned C, B, W and sigma
+        Contrastive Divergence Learning
+        :return: Learned C, B, W and sigma
        """
 
         # Initialization
@@ -92,67 +86,87 @@ class GaussianBernoulliRBM(object):
             # Line Notification #
             #####################
             if e % (self.epoch * 0.2) == 0:
-                self.line_ui_manager.send_line("epoch: %s / %s" % (e, self.epoch))
-
-            #            if e % (self.epoch * 0.01) == 0:
-            #
-            #                for i in range(W_new.shape[0]):
-            #                    path_to_file = os.path.join(self.dir_for_saving_result, 'W_%d_%d.jpg' % (i, e))
-            #                    Image.fromarray(
-            #                        np.uint8(np.reshape((W_new[i] / np.max(W_new[i])) * 255, (28, 28)))).save(
-            #                        path_to_file)
+                self.line_notifier.send_line("epoch: %s / %s" % (e, self.epoch))
 
             #####################
             # 1. Gibbs Sampling #
             #####################
-
             X = np.array(self.mini_batches[int(e % len(self.mini_batches))])
 
-            if self.sampling_type == 'CD':
-                X_k = self.BlockGibbsSampling(X, C_new, B_new, W_new, sigma_new)
-
-            elif self.sampling_type == 'PCD':
-                X_k = self.BlockGibbsSampling(X_k, C_new, B_new, W_new, sigma_new)
+            X_k = self.gibbs_sampling(X, X_k, C_new, B_new, W_new, sigma_new)
 
             ######################
             # 2. Gradient Update #
             ######################
 
-            P_H_1_X = self.prob_H_1_X(X, C_new, W_new, sigma_new)
-            P_H_1_X_k = self.prob_H_1_X(X_k, C_new, W_new, sigma_new)
-
-            rho_old = rho_new
-            C_old = C_new
-            B_old = B_new
-            # W_old = W_new * self.spread_funcs
-            W_old = W_new
-            sigma_old = sigma_new
-
-            rho_new, grad_E_sparse_W, grad_E_sparse_C = self.sparse_regularization(X,
-                                                                                   C_old, W_old,
-                                                                                   sigma_old, rho_old)
-
-            C_new = C_old + self.learning_rate * (self.CD_C(P_H_1_X, P_H_1_X_k)
-                                                  - self.sparse_regularization_rate * grad_E_sparse_C) \
-                    + self.momentum_rate * delta_C
-
-            B_new = B_old + self.learning_rate * self.CD_B(X, X_k, sigma_old) \
-                    + self.momentum_rate * delta_B
-
-            W_new = W_old + self.learning_rate * (self.CD_W(X, X_k, P_H_1_X, P_H_1_X_k,
-                                                            sigma_old) - self.weight_decay_rate * W_old - self.sparse_regularization_rate * grad_E_sparse_W) \
-                    + self.momentum_rate * delta_W
-
-            sigma_new = sigma_old
-
-            delta_C = C_new - C_old
-            delta_B = B_new - B_old
-            delta_W = W_new - W_old
+            X, X_k, C_new, B_new, W_new, sigma_new, delta_C, delta_B, delta_W, rho_new = self.gradient_update(X, X_k,
+                                                                                                              C_new,
+                                                                                                              B_new,
+                                                                                                              W_new,
+                                                                                                              sigma_new,
+                                                                                                              delta_C,
+                                                                                                              delta_B,
+                                                                                                              delta_W,
+                                                                                                              rho_new)
 
         # non negative limitation
         W_new[W_new < 0] = 0
 
         return C_new, B_new, W_new, sigma_new
+
+    def gradient_update(self, X, X_k, C_new, B_new, W_new, sigma_new, delta_C, delta_B, delta_W, rho_new):
+        P_H_1_X = self.prob_H_1_X(X, C_new, W_new, sigma_new)
+        P_H_1_X_k = self.prob_H_1_X(X_k, C_new, W_new, sigma_new)
+
+        rho_old = rho_new
+        C_old = C_new
+        B_old = B_new
+        # W_old = W_new * self.spread_funcs
+        W_old = W_new
+        sigma_old = sigma_new
+
+        rho_new, grad_E_sparse_W, grad_E_sparse_C = self.sparse_regularization(X,
+                                                                               C_old, W_old,
+                                                                               sigma_old, rho_old)
+
+        C_new = C_old + self.learning_rate * (self.CD_C(P_H_1_X, P_H_1_X_k)
+                                              - self.sparse_regularization_rate * grad_E_sparse_C) \
+                + self.momentum_rate * delta_C
+
+        B_new = B_old + self.learning_rate * self.CD_B(X, X_k, sigma_old) \
+                + self.momentum_rate * delta_B
+
+        W_new = W_old + self.learning_rate * (self.CD_W(X, X_k, P_H_1_X, P_H_1_X_k,
+                                                        sigma_old) - self.weight_decay_rate * W_old - self.sparse_regularization_rate * grad_E_sparse_W) \
+                + self.momentum_rate * delta_W
+
+        sigma_new = sigma_old
+
+        delta_C = C_new - C_old
+        delta_B = B_new - B_old
+        delta_W = W_new - W_old
+
+        return X, X_k, C_new, B_new, W_new, sigma_new, delta_C, delta_B, delta_W, rho_new
+
+    def gibbs_sampling(self, X, X_k, C_new, B_new, W_new, sigma_new):
+        """
+
+        :param X:
+        :param X_k:
+        :param C_new:
+        :param B_new:
+        :param W_new:
+        :param sigma_new:
+        :return:
+        """
+
+        if self.sampling_type == 'CD':
+            X_k = self.BlockGibbsSampling(X, C_new, B_new, W_new, sigma_new)
+
+        elif self.sampling_type == 'PCD':
+            X_k = self.BlockGibbsSampling(X_k, C_new, B_new, W_new, sigma_new)
+
+        return X_k
 
     def spread_function(self, img_size, center, width, height):
         """
