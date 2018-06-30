@@ -12,5 +12,5 @@ setup(
     url="https://github.com/DaikiMorita/RBM",
     packages=find_packages(),
     install_requires=['numpy', 'tqdm', 'requests', 'pillow'],
-    test_suite='DBM.test.suite.suite'
+    test_suite='DBM.discover.suite'
 )

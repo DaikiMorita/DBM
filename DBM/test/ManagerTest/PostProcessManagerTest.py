@@ -1,7 +1,6 @@
 import unittest
 import numpy as np
 import os
-import numpy.testing as npt
 from DBM.src.Manager import PostProcessManager
 
 
