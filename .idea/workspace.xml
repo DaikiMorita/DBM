@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/DBM/logging.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBM/src/LogConfig.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBM/test/ManagerTest/PostProcessManagerTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBM/src/Manager/GaussianBernoulliRBM.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Manager/GaussianBernoulliRBM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBM/src/Manager/PostProcessManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Manager/PostProcessManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py" afterDir="false" />
-    </list>
+    <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,11 +53,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostProcessManagerTest.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PostProcessManagerTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/PostProcessManagerTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="405">
+              <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="suite.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBM/test/suite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -302,12 +306,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_make_mini_batch - 2018.06.28 at 23h 21m 32s.xml">
-      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest_test_make_mini_batch - 2018.06.28 at 23h 25m 11s.xml">
-      <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest.test_make_mini_batch" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_PreProcessManagerTest_PreProcessManagerTest - 2018.06.28 at 23h 25m 13s.xml">
       <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest" configurationId="tests" />
     </history-entry>
@@ -332,17 +330,23 @@
     <history-entry file="Unittests_for_PostProcessManagerTest_PostProcessManagerTest_test_save_numpy_array - 2018.06.30 at 18h 51m 53s.xml">
       <configuration name="Unittests for PostProcessManagerTest.PostProcessManagerTest.test_save_numpy_array" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_PostProcessManagerTest_PostProcessManagerTest_test_save_numpy_array - 2018.06.30 at 18h 52m 26s.xml">
+      <configuration name="Unittests for PostProcessManagerTest.PostProcessManagerTest.test_save_numpy_array" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_PostProcessManagerTest_PostProcessManagerTest_test_save_numpy_array - 2018.06.30 at 18h 52m 30s.xml">
+      <configuration name="Unittests for PostProcessManagerTest.PostProcessManagerTest.test_save_numpy_array" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="2059" y="49" width="1399" height="992" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23373838" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23373838" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38063064" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38063064" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -396,13 +400,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/ParamsConfig.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/test/suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -540,8 +537,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/PostProcessManagerTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="405">
+          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/test/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
