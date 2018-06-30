@@ -3,6 +3,7 @@ import os
 import requests
 
 
+# To Do: it may be better to replace this feature by Line with the one by Slack
 class LineNotifier(object):
     """
     Line Notification

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/DBM/test/ManagerTest/test_ExFileManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBM/application.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/application.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBM/params.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/params.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBM/src/Manager/LineNotifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Manager/LineNotifier.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +13,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="test_PostProcessManager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_PostProcessManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ExFileManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+            <state relative-caret-position="420">
+              <caret line="106" column="18" lean-forward="true" selection-start-line="106" selection-start-column="18" selection-end-line="106" selection-end-column="18" />
               <folding>
                 <element signature="e#17#36#0" expanded="true" />
               </folding>
@@ -32,8 +40,8 @@
       <file leaf-file-name="test_ExFileManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_ExFileManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -41,7 +49,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_PreProcessManager.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LineNotifier.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBM/src/Manager/LineNotifier.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+              <folding>
+                <element signature="e#15#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_PreProcessManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_PreProcessManager.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
@@ -93,7 +113,6 @@
         <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/PreProcessManager.py" />
         <option value="$PROJECT_DIR$/DBM/console_scripts/__init__.py" />
         <option value="$PROJECT_DIR$/.circleci/config.yml" />
-        <option value="$PROJECT_DIR$/DBM/src/Manager/LineNotifier.py" />
         <option value="$PROJECT_DIR$/DBM/src/Manager/ExfileManager.py" />
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py" />
         <option value="$PROJECT_DIR$/DBM/logging.conf" />
@@ -118,12 +137,13 @@
         <option value="$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py" />
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_EXFileManager.py" />
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_ExFileManager.py" />
+        <option value="$PROJECT_DIR$/DBM/src/Manager/LineNotifier.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2071" />
-    <option name="y" value="32" />
+    <option name="x" value="2096" />
+    <option name="y" value="35" />
     <option name="width" value="1399" />
     <option name="height" value="992" />
   </component>
@@ -328,7 +348,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2071" y="32" width="1399" height="992" extended-state="0" />
+    <frame x="2096" y="35" width="1399" height="992" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2866333" />
@@ -429,13 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/LineNotifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/PostProcessManagerTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -497,16 +510,6 @@
     <entry file="file://$PROJECT_DIR$/DBM/test/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_PostProcessManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/test/ViewerTest/test_Viewer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -559,16 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
-          <folding>
-            <element signature="e#17#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -582,10 +575,10 @@
     <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_EXFileManager.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_ExFileManager.py">
+    <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_PostProcessManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="165">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -598,6 +591,36 @@
           <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="106" column="18" lean-forward="true" selection-start-line="106" selection-start-column="18" selection-end-line="106" selection-end-column="18" />
+          <folding>
+            <element signature="e#17#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_ExFileManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/LineNotifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <element signature="e#15#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
