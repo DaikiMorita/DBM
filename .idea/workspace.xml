@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBM/src/Manager/GaussianBernoulliRBM.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Manager/GaussianBernoulliRBM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBM/src/Controller/MainController.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Controller/MainController.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +13,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GaussianBernoulliRBM.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GaussianBernoulliRBM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/src/Manager/GaussianBernoulliRBM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2445">
-              <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+            <state relative-caret-position="285">
+              <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBM/src/Controller/MainController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -76,7 +84,6 @@
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_PreProcessManager.py" />
         <option value="$PROJECT_DIR$/DBM/discover.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/DBM/src/Controller/MainController.py" />
         <option value="$PROJECT_DIR$/DBM/config.ini.py" />
         <option value="$PROJECT_DIR$/DBM/config.ini" />
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_PostProcessManager.py" />
@@ -88,12 +95,13 @@
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_ExFileManager.py" />
         <option value="$PROJECT_DIR$/DBM/src/Manager/LineNotifier.py" />
         <option value="$PROJECT_DIR$/DBM/src/Manager/GaussianBernoulliRBM.py" />
+        <option value="$PROJECT_DIR$/DBM/src/Controller/MainController.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2143" />
-    <option name="y" value="77" />
+    <option name="x" value="2206" />
+    <option name="y" value="73" />
     <option name="width" value="1399" />
     <option name="height" value="992" />
   </component>
@@ -299,7 +307,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2143" y="77" width="1399" height="992" extended-state="0" />
+    <frame x="2206" y="73" width="1399" height="992" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2866333" />
@@ -500,13 +508,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/Controller/MainController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/Manager/LineNotifier.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -549,8 +550,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/Manager/GaussianBernoulliRBM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2445">
-          <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+        <state relative-caret-position="285">
+          <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/Controller/MainController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
         </state>
       </provider>
     </entry>
