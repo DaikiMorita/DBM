@@ -5,8 +5,6 @@ import tqdm
 import numpy as np
 import warnings
 import math
-from PIL import Image
-import os
 
 
 class GaussianBernoulliRBM(object):

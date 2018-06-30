@@ -1,15 +1,9 @@
 # coding=utf-8
 
-import collections
-import configparser
 import numpy as np
-import warnings
-import traceback
-import sys
 from DBM.src.Viewer import Viewer
 import os
 from PIL import Image
-from DBM.src.Manager import ExFileManager
 from DBM.src.Manager import LineNotifier
 
 

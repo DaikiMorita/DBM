@@ -4,10 +4,8 @@
 import configparser
 import os
 import tqdm
-import numba
 import numpy as np
 from PIL import Image
-from skimage import io
 
 
 class ExFileManager(object):
