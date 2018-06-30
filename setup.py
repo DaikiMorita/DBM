@@ -12,6 +12,6 @@ setup(
     author="Daiki Morita",
     url="https://github.com/DaikiMorita/RBM",
     packages=find_packages(),
-    install_requires=['numpy', 'tqdm', 'requests', 'pillow'],
+    install_requires=['numpy', 'tqdm', 'requests', 'pillow'],  # To Do: can we create here automatically ?
     test_suite='DBM.discover.suite'
 )
