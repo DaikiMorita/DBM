@@ -18,15 +18,12 @@ class PostProcessManager(object):
     in charge of post processes.
     """
 
-    def __init__(self, config_file_name):
+    def __init__(self, ):
         # Reads a config file
-        ini_file = configparser.ConfigParser()
-        ini_file.read(config_file_name)
         # self.threshold_h_1 = float(ini_file['Parameter']['threshold_h_1'])
 
         self.lineNotifier = LineNotifier.LineNotifier()
         self.viewer = Viewer.Viewer()
-        self.ex_file_manager = ExFileManager.ExFileManager(config_file_name)
 
     def determine_fired_H(self, each_label_data, C, W):
 
@@ -111,7 +108,7 @@ class PostProcessManager(object):
             self.viewer.disp_msg_console(
                 "array_to_image Error: array should be at most 3-d.\n")
 
-    def save_numpy_array(self, array, filename, *, path=''):
+    def save_numpy_array(self, array, filename, path=''):
         """
 
         :param array: numpy array
@@ -119,9 +116,9 @@ class PostProcessManager(object):
         :param path: path where array will be saved
         :return: None
         """
-        name = os.path.join(path, filename)
+        # To Do: Error msg should be written in log file, not direct console printing.
         try:
-            np.save('%s.npy' % name, array)
+            np.save('%s.npy' % os.path.join(path, filename), array)
         except FileNotFoundError:
             self.viewer.disp_msg_console(
                 "FileNotFoundError : No such file or directory\n"

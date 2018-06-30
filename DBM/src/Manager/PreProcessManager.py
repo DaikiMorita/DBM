@@ -104,6 +104,3 @@ class PreProcessManager(object):
             self.viewer.display_message(
                 "Decorrelation Error: data_array should be 2 or 3 dimension.\n")
             raise Exception
-
-    def display_image(self):
-        pass

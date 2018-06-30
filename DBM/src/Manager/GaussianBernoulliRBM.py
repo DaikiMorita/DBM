@@ -242,10 +242,9 @@ class GaussianBernoulliRBM(object):
 
         return rho_new, delta_E_sparse_W, delta_E_sparse_C
 
-    def BlockGibbsSampling(self, X, C, B, W, sigma):
+    def block_gibbs_sampling(self, X, C, B, W, sigma):
         """
         Block Gibbs Sampling
-        :param num_gibbs_sampling: number of sampling
         :param X: values of visible (dim: num data * num visible units)
         :param C: biases of hidden units(dim 1 * num hidden)
         :param B: biases of visible units(dim 1 * num visible)
