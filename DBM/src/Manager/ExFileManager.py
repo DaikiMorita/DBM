@@ -24,7 +24,7 @@ class ExFileManager(object):
     def read_image_data(self, path_all_dirs):
         """
         Reads data.
-        This method is applied especially when you try to read "Image"s.
+        This method can be applied especially when you try to read "image"s.
         :return: num_all_data, formated_data, each_label_data
         """
 
@@ -43,7 +43,7 @@ class ExFileManager(object):
 
         # all_data_array above was organized like [[data with label A],[data with label B]....]
         # a format like [data with label A, data with label B,...] is easy to use.
-        # For example, for shaffling or making mini-batch.
+        # For example, for shuffling or making mini-batch.
         formatted_labels = []
         formatted_data = []
         for labels, data in zip(all_labels, all_data):
@@ -98,32 +98,20 @@ class ExFileManager(object):
         """
         return len(os.listdir(dir)) - self.count_empty_file(dir)
 
-    def image_data_pre_process(self, path):
+    def image_data_pre_process(self, path_to_image):
 
-        # flatten
-        # img = Image.open(path)
-        img = Image.open(path)
+        img = Image.open(path_to_image)
         width, height = img.size
         return [img.getpixel((i, j)) / 255 for j in range(height) for i in range(width)]
 
-    def numpy_array_save(self, filename, array):
+    def get_image_width_height(self, path_to_image):
         """
-        Saves numpy array into a directory.
-        :param filename: filename
-        :param array: array to be saved
-        :return: None
-        """
-
-        np.save('%s.npy' % filename, array)
-
-    def get_image_width_height(self, path):
-        """
-
-        :param path:
+        get width and height of an image
+        :param path_to_image:
         :return:
         """
 
-        img = Image.open(path)
+        img = Image.open(path_to_image)
         width, height = img.size
 
         return width, height
