@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBM/src/Manager/SamplingManager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBM/src/Model/DeepBM.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Model/DeepBM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBM/src/Model/Params.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,11 +58,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeepBM.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DeepBM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/src/Model/DeepBM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+            <state relative-caret-position="270">
+              <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExFileManager.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="21" column="42" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -121,7 +126,6 @@
         <option value="$PROJECT_DIR$/DBM/config.ini" />
         <option value="$PROJECT_DIR$/DBM/test/ViewerTest/test_Viewer.py" />
         <option value="$PROJECT_DIR$/DBM/params.ini" />
-        <option value="$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py" />
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_EXFileManager.py" />
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_ExFileManager.py" />
         <option value="$PROJECT_DIR$/DBM/src/Manager/LineNotifier.py" />
@@ -137,10 +141,11 @@
         <option value="$PROJECT_DIR$/DBM/src/Manager/PostProcessManager.py" />
         <option value="$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py" />
         <option value="$PROJECT_DIR$/DBM/src/Model/DeepBM.py" />
+        <option value="$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-37" />
     <option name="y" value="20" />
     <option name="width" value="1399" />
@@ -380,15 +385,14 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1368" height="750" extended-state="7" />
-    <editor active="true" />
+    <frame x="-1" y="-1" width="1368" height="750" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2635432" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50073206" side_tool="true" visible="true" weight="0.2113323" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.2113323" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926794" weight="0.2113323" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -533,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_PreProcessManager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -659,8 +656,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/Model/DeepBM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+        <state relative-caret-position="270">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="43" />
         </state>
       </provider>
     </entry>
