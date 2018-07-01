@@ -13,9 +13,7 @@ class PostProcessManager(object):
     def __init__(self, ):
         # Reads a config file
         # self.threshold_h_1 = float(ini_file['Parameter']['threshold_h_1'])
-
-        self.lineNotifier = LineNotifier.LineNotifier()
-        self.viewer = Viewer.Viewer()
+        pass
 
     def determine_fired_H(self, each_label_data, C, W):
 
