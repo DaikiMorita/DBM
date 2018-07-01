@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/DBM/src/Model/DeepBM.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Model/DeepBM.py" afterDir="false" />
-    </list>
+    <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -406,7 +404,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1368" height="750" extended-state="6" />
+    <frame x="-1" y="-1" width="1368" height="750" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20278184" />
       <window_info anchor="bottom" id="TODO" order="6" />
