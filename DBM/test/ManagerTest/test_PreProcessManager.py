@@ -60,26 +60,3 @@ class PreProcessManagerTest(unittest.TestCase):
         actual = self.pre_process_manager.make_mini_batch(data_list, 3)
 
         self.assertEqual(expected, actual)
-
-    def test_make_dir(self):
-        """
-        test of making dir
-        :return:
-        """
-
-        self.pre_process_manager.make_dir("temp", "./")
-        expected = True
-        actual = os.path.isdir(os.path.join("./", "temp"))
-        self.assertEqual(expected, actual)
-
-    def test_copy_file(self):
-        """
-        test of copy file
-        :return:
-        """
-
-        # Is this code valid as test?
-        self.pre_process_manager.copy_file(os.path.join("../..", "application.ini"), "../../../result")
-        expected = True
-        actual = os.path.isfile(os.path.join("../../../result", "application.ini"))
-        self.assertEqual(expected, actual)
