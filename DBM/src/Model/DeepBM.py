@@ -35,24 +35,30 @@ class DeepBM(object):
         pass
 
     # To Do: eq. (8)~(10)
+    # deterministic, hence possible in C/C++
     def sigmoid_activation(self):
         pass
 
     # To Do: eq. (8)~(10)
+    # deterministic, hence possible in C/C++
     def calc_bottom_up_pass(self):
         pass
 
     # To Do: eq. (4)~(6)
+    # deterministic, hence possible in C/C++
     def solve_mean_field_fixed_point_equation(self):
         pass
 
     # To Do: eq. (11)
+    # deterministic, hence possible in C/C++
     def calc_KL_divergence(self):
         pass
 
+    # stochastic, hence may be better in python
     def stochastic_approximation(self):
         pass
 
+    # stochastic, hence may be better in python
     def gibbs_sampler(self):
         pass
 

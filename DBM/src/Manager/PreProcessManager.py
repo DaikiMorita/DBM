@@ -14,31 +14,6 @@ class PreProcessManager(object):
     def __init__(self):
         self.viewer = v.Viewer()
 
-    def make_dir(self, dir_name, path):
-        """
-        mkdir
-        :param dir_name:
-        :param path:
-        :return:
-        """
-        try:
-            os.mkdir(os.path.join(path, dir_name))
-        except FileExistsError:
-            self.viewer.disp_msg_console("there is a dir with the name at the path.")
-
-    def copy_file(self, filename, path):
-        """
-        copy file into path
-        :param filename:
-        :param path:
-        :return:
-        """
-
-        try:
-            shutil.copy2(filename, path)
-        except FileExistsError:
-            self.viewer.disp_msg_console("there is a file with the name at the path.")
-
     def decorrelation(self, data_array):
 
         if isinstance(data_array, np.ndarray):
