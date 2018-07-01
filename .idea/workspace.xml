@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBM/application.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/application.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBM/params.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBM/src/Controller/MainController.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Controller/MainController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBM/src/Manager/DataProcessManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Manager/DataProcessManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBM/test/suite.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,13 +28,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PreProcessManager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py">
+      <file leaf-file-name="MainController.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBM/src/Controller/MainController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+            <state relative-caret-position="495">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
               <folding>
-                <element signature="e#16#34#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -37,8 +43,8 @@
       <file leaf-file-name="DataProcessManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/src/Manager/DataProcessManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="688">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -46,14 +52,59 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostProcessManager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PostProcessManager.py">
+      <file leaf-file-name="application.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBM/application.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="learning.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBM/learning.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="discover.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBM/discover.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreProcessManager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
               <folding>
                 <element signature="e#16#34#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExFileManager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -63,15 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="705">
               <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExFileManager.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="42" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -91,9 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DBM/console_scripts/ParamsConfig.py" />
-        <option value="$PROJECT_DIR$/DBM/console_scripts/Controller/MainController.py" />
-        <option value="$PROJECT_DIR$/DBM/console_scripts/Model/RestrictedBoltzmannMachine.py" />
         <option value="$PROJECT_DIR$/DBM/console_scripts/Model/RBM.py" />
         <option value="$PROJECT_DIR$/DBM/console_scripts/Model/GaussianBinaryRBM.py" />
         <option value="$PROJECT_DIR$/DBM/console_scripts/Controller/LogController.py" />
@@ -130,26 +169,29 @@
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_ExFileManager.py" />
         <option value="$PROJECT_DIR$/DBM/src/Manager/LineNotifier.py" />
         <option value="$PROJECT_DIR$/DBM/src/Manager/GaussianBernoulliRBM.py" />
-        <option value="$PROJECT_DIR$/DBM/src/Controller/MainController.py" />
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_PreProcessManager.py" />
-        <option value="$PROJECT_DIR$/DBM/application.ini" />
         <option value="$PROJECT_DIR$/DBM/src/Manager/PerformanceManager.py" />
         <option value="$PROJECT_DIR$/DBM/src/Manager/SlackNotifier.py" />
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_PostProcessManager.py" />
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_DataProcessManager.py" />
-        <option value="$PROJECT_DIR$/DBM/src/Manager/DataProcessManager.py" />
         <option value="$PROJECT_DIR$/DBM/src/Manager/PostProcessManager.py" />
         <option value="$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py" />
         <option value="$PROJECT_DIR$/DBM/src/Model/DeepBM.py" />
+        <option value="$PROJECT_DIR$/DBM/src/Controller/LearningManager.py" />
+        <option value="$PROJECT_DIR$/DBM/src/Controller/LearningController.py" />
         <option value="$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py" />
+        <option value="$PROJECT_DIR$/DBM/learning.ini" />
+        <option value="$PROJECT_DIR$/DBM/src/Manager/DataProcessManager.py" />
+        <option value="$PROJECT_DIR$/DBM/application.ini" />
+        <option value="$PROJECT_DIR$/DBM/src/Controller/MainController.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-37" />
-    <option name="y" value="20" />
-    <option name="width" value="1399" />
-    <option name="height" value="992" />
+    <option name="x" value="2880" />
+    <option name="y" value="-4" />
+    <option name="width" value="960" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -159,7 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,6 +218,13 @@
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DBM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DBM" type="b2602c69:ProjectViewProjectNode" />
@@ -230,6 +278,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -385,9 +434,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="1919" y="-11" width="1922" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2630728" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416666" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50073206" side_tool="true" visible="true" weight="0.2112245" />
       <window_info anchor="bottom" id="Version Control" order="9" />
@@ -434,20 +484,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/LoggingManager.py" />
-    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/PostProcessManager.py" />
-    <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Model/Params.py" />
     <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Application.py" />
     <entry file="file://$PROJECT_DIR$/DBM/console_scripts/ParamsConfig.py" />
     <entry file="file://$PROJECT_DIR$/DBM/console_scripts/Manager/PreProcessManager.py" />
@@ -474,13 +514,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Deep_Boltzmann_Machine.egg-info/dependency_links.txt" />
-    <entry file="file://$PROJECT_DIR$/DBM/test/suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/PostProcessManagerTest.py" />
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/memo" />
@@ -503,20 +536,6 @@
     <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py" />
     <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_EXFileManager.py" />
     <entry file="file://$USER_HOME$/.pyenv/versions/anaconda3-5.2.0/lib/python3.6/unittest/case.py" />
-    <entry file="file://$PROJECT_DIR$/DBM/src/Controller/MainController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/application.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/params.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -570,30 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/discover.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-          <folding>
-            <element signature="e#16#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/Manager/SamplingManager.py" />
     <entry file="file://$PROJECT_DIR$/DBM/src/Model/Params.py" />
     <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PostProcessManager.py">
@@ -606,13 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/Model/GaussianBernoulliRBM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/Model/DeepBM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -620,10 +608,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/Controller/LearningManager.py" />
+    <entry file="file://$PROJECT_DIR$/DBM/src/Controller/LearningController.py" />
+    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+          <folding>
+            <element signature="e#16#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/test/suite.py" />
+    <entry file="file://$PROJECT_DIR$/DBM/discover.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="43" />
+        <state relative-caret-position="330">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/Model/GaussianBernoulliRBM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/DataProcessManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/learning.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/application.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/Controller/MainController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

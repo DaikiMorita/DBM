@@ -13,11 +13,10 @@ class ExFileManager(object):
     Manages external files
     """
 
-    def __init__(self, config_file_name):
+    def __init__(self):
 
         # Reads .config.ini
         ini_file = configparser.ConfigParser()
-        ini_file.read(config_file_name)
 
     def read_image_data(self, path_all_dirs):
         """

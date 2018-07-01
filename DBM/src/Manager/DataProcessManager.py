@@ -48,7 +48,7 @@ class DataProcessManager(object):
 
         return mini_batches
 
-    def make_dir(self, dir_name, path):
+    def make_dir(self, path, dir_name):
         """
         mkdir
         :param dir_name:
@@ -62,17 +62,16 @@ class DataProcessManager(object):
         except FileExistsError:
             pass
 
-    def copy_file(self, filename, path):
+    def copy_file(self, before_path, after_path):
         """
         copy file into path
-        :param filename:
-        :param path:
+        :param before_path:
+        :param after_path:
         :return:
         """
-
         # To Do: Error msg should be written in log file, not direct console printing.
         try:
-            shutil.copy2(filename, path)
+            shutil.copy2(before_path, after_path)
         except FileExistsError:
             pass
 
