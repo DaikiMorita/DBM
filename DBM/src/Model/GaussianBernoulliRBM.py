@@ -17,8 +17,7 @@ class GaussianBernoulliRBM(object):
     # TO DO: is there any way automatically to create constructor like java-lombok?
     def __init__(self, mini_batches, epoch, num_visible_units, num_hidden_units, sampling_type, sampling_times,
                  learning_rate,
-                 momentum_rate, weight_decay_rate, sparse_regularization, width_sf, height_sf, num_sf,
-                 dir_for_saving_result):
+                 momentum_rate, weight_decay_rate, sparse_regularization, width_sf, height_sf, num_sf):
 
         # Generates objects
         self.viewer = v.Viewer()

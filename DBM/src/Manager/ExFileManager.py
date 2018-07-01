@@ -123,3 +123,13 @@ class ExFileManager(object):
 
         with open(filename, mode='a', encoding='utf-8') as fh:
             fh.write('%s\n' % data)
+
+    def numpy_array_save(self, filename, array):
+        """
+        Saves numpy array into a directory.
+        :param filename: filename
+        :param array: array to be saved
+        :return: None
+        """
+
+        np.save('%s.npy' % filename, array)
