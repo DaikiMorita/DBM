@@ -1,6 +1,4 @@
 # coding=utf-8
-import DBM.src.Manager.LineNotifier as ln
-import DBM.src.Viewer.Viewer as v
 import tqdm
 import numpy as np
 import warnings
@@ -19,10 +17,6 @@ class GaussianBernoulliRBM(object):
                  learning_rate,
                  momentum_rate, weight_decay_rate, sparse_regularization, width_sf, height_sf, num_sf):
 
-        # Generates objects
-        self.viewer = v.Viewer()
-        self.line_notifier = ln.LineNotifier
-
         # Parameters
         self.mini_batches = mini_batches
         self.epoch = epoch
@@ -37,7 +31,6 @@ class GaussianBernoulliRBM(object):
         self.sparse_regularization_rate = sparse_regularization[1]
         self.width_spread_function = width_sf
         self.height_spread_function = height_sf
-        self.dir_for_saving_result = dir_for_saving_result
         side_len_img = int(math.sqrt(num_visible_units))
         self.spread_funcs = np.array(
             [self.spread_function((side_len_img, side_len_img),
@@ -159,10 +152,10 @@ class GaussianBernoulliRBM(object):
         """
 
         if self.sampling_type == 'CD':
-            X_k = self.BlockGibbsSampling(X, C_new, B_new, W_new, sigma_new)
+            X_k = self.block_gibbs_sampling(X, C_new, B_new, W_new, sigma_new)
 
         elif self.sampling_type == 'PCD':
-            X_k = self.BlockGibbsSampling(X_k, C_new, B_new, W_new, sigma_new)
+            X_k = self.block_gibbs_sampling(X_k, C_new, B_new, W_new, sigma_new)
 
         return X_k
 
@@ -280,7 +273,6 @@ class GaussianBernoulliRBM(object):
 
             # Over float is interpreted as RuntimeWarning.
             # An array filled with 0 will be returned instead of the array with over floated number.
-            self.viewer.display_message("Overfloat happened in calculating prob_h_1_X")
             return np.zeros((X.shape[0], W.shape[0]))
 
     def sampling_H_X(self, P_H_1):

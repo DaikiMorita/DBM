@@ -1,11 +1,9 @@
 import unittest
 import numpy as np
 import numpy.testing as npt
-from DBM.src.Manager import DataProcessManager
-import sys
+from DBM.src.python3.Manager import DataProcessManager
 import os
 
-sys.path.append("DBM")
 
 
 class DataProcessManagerTest(unittest.TestCase):

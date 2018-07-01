@@ -1,10 +1,8 @@
 # coding=utf-8
 
 import numpy as np
-from DBM.src.Viewer import Viewer
 import os
 from PIL import Image
-from DBM.src.Manager import LineNotifier
 
 
 class PostProcessManager(object):
@@ -34,8 +32,6 @@ class PostProcessManager(object):
 
             print(H_sum.tolist())
             label_H.append([l_d[0], H_sum.tolist()])
-
-        self.ex_file_manager.write_to_file('label_H', label_H)
 
         return label_H
 

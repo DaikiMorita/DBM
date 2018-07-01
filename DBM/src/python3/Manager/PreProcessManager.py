@@ -1,9 +1,6 @@
 # coding=utf-8
 
 import numpy as np
-import os
-import DBM.src.Viewer.Viewer as v
-import shutil
 
 
 class PreProcessManager(object):

@@ -1,7 +1,5 @@
 import unittest
-import numpy as np
-import numpy.testing as npt
-from DBM.src.Manager import ExFileManager
+from DBM.src.python3.Manager import ExFileManager
 
 
 class TestExFileManager(unittest.TestCase):
