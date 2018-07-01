@@ -11,6 +11,7 @@ from DBM.src.Manager import ExFileManager
 from DBM.src.Manager import DataProcessManager
 from DBM.src.Model import GaussianBernoulliRBM
 
+
 class MainController(object):
     """
     Controls main process
