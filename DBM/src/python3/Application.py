@@ -1,6 +1,5 @@
 from .Controller import ParamSetController
 
-
 class Application(object):
     """
     Deep Boltzmann Machine Project
