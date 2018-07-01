@@ -1,7 +1,9 @@
 # coding=utf-8
 
 import numpy as np
+import os
 import DBM.src.Viewer.Viewer as v
+import shutil
 
 
 class PreProcessManager(object):
@@ -51,6 +53,31 @@ class PreProcessManager(object):
         mini_batches.append(rest_batch)
 
         return mini_batches
+
+    def make_dir(self, dir_name, path):
+        """
+        mkdir
+        :param dir_name:
+        :param path:
+        :return:
+        """
+        try:
+            os.mkdir(os.path.join(path, dir_name))
+        except FileExistsError:
+            self.viewer.disp_msg_console("there is a dir with the name at the path.")
+
+    def copy_file(self, filename, path):
+        """
+        copy file into path
+        :param filename:
+        :param path:
+        :return:
+        """
+
+        try:
+            shutil.copy2(filename, path)
+        except FileExistsError:
+            self.viewer.disp_msg_console("there is a file with the name at the path.")
 
     def decorrelation(self, data_array):
 
