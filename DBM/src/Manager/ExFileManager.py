@@ -19,8 +19,6 @@ class ExFileManager(object):
         ini_file = configparser.ConfigParser()
         ini_file.read(config_file_name)
 
-        # self.depth = float(ini_file.get('GeneralParameter', 'depth'))
-
     def read_image_data(self, path_all_dirs):
         """
         Reads data.

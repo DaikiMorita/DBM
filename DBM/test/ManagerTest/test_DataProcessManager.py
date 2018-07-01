@@ -1,14 +1,14 @@
 import unittest
-import os
 import numpy as np
 import numpy.testing as npt
-from DBM.src.Manager import PreProcessManager
+from DBM.src.Manager import DataProcessManager
 import sys
+import os
 
 sys.path.append("DBM")
 
 
-class PreProcessManagerTest(unittest.TestCase):
+class DataProcessManagerTest(unittest.TestCase):
     """
     unit test of features in PreProcessManager
     """
@@ -18,7 +18,7 @@ class PreProcessManagerTest(unittest.TestCase):
         procedures before every tests are started. This code block is executed only once.
         :return:
         """
-        self.pre_process_manager = PreProcessManager.PreProcessManager()
+        self.data_process_manager = DataProcessManager.DataProcessManager()
 
     def test_z_score_normalization(self):
         """
@@ -31,7 +31,7 @@ class PreProcessManagerTest(unittest.TestCase):
 
         expected = np.array([[-np.sqrt(2), 0, 0, np.sqrt(2)], [-np.sqrt(2), 0, 0, np.sqrt(2)], ])
 
-        actual = self.pre_process_manager.z_score_normalization(arr)
+        actual = self.data_process_manager.z_score_normalization(arr)
 
         npt.assert_array_almost_equal(expected, actual)
 
@@ -57,6 +57,23 @@ class PreProcessManagerTest(unittest.TestCase):
         expected = [[[1, 1, 1], [2, 2, 2], [3, 3, 3]], [[4, 4, 4], [5, 5, 5], [6, 6, 6]],
                     [[7, 7, 7], [8, 8, 8], [9, 9, 9]], [[10, 10, 10], [1, 1, 1], [2, 2, 2]]]
 
-        actual = self.pre_process_manager.make_mini_batch(data_list, 3)
+        actual = self.data_process_manager.make_mini_batch(data_list, 3)
 
+        self.assertEqual(expected, actual)
+
+    def test_save_numpy_array(self):
+        """
+        test of save_numpy_array
+        check whether a file with '.npy' is created at a specified path Even with your naked eye
+        :return:
+        """
+
+        arr = np.ones((100, 100))
+        filename = "test_save_numpy_array"
+        path = ""
+
+        self.data_process_manager.save_numpy_array(arr, filename, path)
+
+        expected = True
+        actual = os.path.isfile(os.path.join(path, filename + ".npy"))
         self.assertEqual(expected, actual)
