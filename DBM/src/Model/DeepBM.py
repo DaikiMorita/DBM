@@ -32,8 +32,3 @@ class DeepBM(object):
     def parameter_update(self):
         pass
 
-    def get_W(self):
-        pass
-
-    def get_R(self):
-        pass
