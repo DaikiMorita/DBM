@@ -101,19 +101,3 @@ class PostProcessManager(object):
         else:
             self.viewer.disp_msg_console(
                 "array_to_image Error: array should be at most 3-d.\n")
-
-    def save_numpy_array(self, array, filename, path=''):
-        """
-
-        :param array: numpy array
-        :param filename: name for saving
-        :param path: path where array will be saved
-        :return: None
-        """
-        # To Do: Error msg should be written in log file, not direct console printing.
-        try:
-            np.save('%s.npy' % os.path.join(path, filename), array)
-        except FileNotFoundError:
-            self.viewer.disp_msg_console(
-                "FileNotFoundError : No such file or directory\n"
-                "The array was not saved.")
