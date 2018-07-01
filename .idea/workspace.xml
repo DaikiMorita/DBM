@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="" />
+    <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/DBM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DBM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBM/src/python3/Controller/MainController.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/python3/Controller/MainController.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,7 +14,52 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="MainController.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBM/src/python3/Controller/MainController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogController.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBM/src/python3/Controller/LogController.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="ParamSetController.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBM/src/python3/Controller/ParamSetController.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="DataProcessManager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/DataProcessManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExFileManager.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/ExFileManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#17#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -25,7 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DBM/console_scripts/Controller/Manager/PreProcessManager.py" />
         <option value="$PROJECT_DIR$/DBM/console_scripts/Controller/Manager/PostProcessManager.py" />
         <option value="$PROJECT_DIR$/DBM/console_scripts/Application.py" />
         <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/SamplingManager.py" />
@@ -76,6 +124,7 @@
         <option value="$PROJECT_DIR$/DBM/src/python3/Model/GaussianBernoulliRBM.py" />
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_DataProcessManager.py" />
         <option value="$PROJECT_DIR$/DBM/test/ManagerTest/test_ExFileManager.py" />
+        <option value="$PROJECT_DIR$/DBM/src/python3/Controller/MainController.py" />
       </list>
     </option>
   </component>
@@ -110,13 +159,6 @@
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DBM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DBM" type="462c0819:PsiDirectoryNode" />
-              <item name="DBM" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="python3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -283,13 +325,13 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416666" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50073206" side_tool="true" weight="0.2112245" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38063064" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38063064" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -301,21 +343,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2866333" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.38063064" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32995495" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32995495" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
@@ -337,11 +379,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DBM/config.ini" />
-    <entry file="file://$PROJECT_DIR$/DBM/test/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/test/ViewerTest/test_Viewer.py" />
     <entry file="file://$PROJECT_DIR$/DBM/src/Viewer/Viewer.py" />
     <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py" />
     <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_EXFileManager.py" />
@@ -385,9 +422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-133">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#16#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -399,13 +433,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/SlackNotifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/PerformanceManager.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -414,28 +442,10 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/LineNotifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#15#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/LearningMonitor.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/ExFileManager.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/DataProcessManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/python3/Model/DeepBM.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -444,9 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="587">
           <caret line="275" selection-start-line="275" selection-end-line="275" />
-          <folding>
-            <element signature="e#15#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -477,19 +484,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/application.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/application.ini" />
     <entry file="file://$PROJECT_DIR$/DBM/discover.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -497,12 +495,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/learning.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/DBM/learning.ini" />
+    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Viewer/Viewer.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/logging.conf">
       <provider selected="true" editor-type-id="text-editor">
@@ -511,8 +506,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Viewer/Viewer.py">
+    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Controller/MainController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Controller/LogController.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Controller/ParamSetController.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/DataProcessManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/ExFileManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#17#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

@@ -1,0 +1,4 @@
+class DataReader(object):
+    """
+
+    """

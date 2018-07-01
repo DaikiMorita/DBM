@@ -6,10 +6,10 @@ from datetime import datetime
 import time
 import os
 
-from DBM.src.python3.Manager import PreProcessManager
-from DBM.src.python3.Manager import ExFileManager
-from DBM.src.python3.Manager import DataProcessManager
-from DBM.src.python3.Model import GaussianBernoulliRBM
+from python3.Manager import PreProcessManager
+from python3.Manager import ExFileManager
+from python3.Manager import DataProcessManager
+from python3.Model import GaussianBernoulliRBM
 
 
 class MainController(object):
