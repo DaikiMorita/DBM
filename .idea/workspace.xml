@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/DBM/src/Manager/PerformanceManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBM/src/Model/DeepBM.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/Model/DeepBM.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GaussianBernoulliRBM.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GaussianBernoulliRBM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/src/Model/GaussianBernoulliRBM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="330">
+              <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -27,8 +25,8 @@
       <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="240">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -39,8 +37,8 @@
       <file leaf-file-name="PreProcessManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-79">
-              <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+            <state relative-caret-position="836">
+              <caret line="85" column="27" lean-forward="true" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
               <folding>
                 <element signature="e#16#34#0" expanded="true" />
               </folding>
@@ -48,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostProcessManager.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PostProcessManager.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PostProcessManager.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
@@ -70,7 +68,7 @@
       <file leaf-file-name="test_PreProcessManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_PreProcessManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
+            <state relative-caret-position="705">
               <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -82,8 +80,8 @@
       <file leaf-file-name="DeepBM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/src/Model/DeepBM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+            <state relative-caret-position="-394">
+              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -91,7 +89,7 @@
       <file leaf-file-name="ExFileManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-904">
+            <state relative-caret-position="435">
               <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
             </state>
           </provider>
@@ -175,7 +173,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-37" />
     <option name="y" value="20" />
     <option name="width" value="1399" />
@@ -431,21 +429,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2866333" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.38063064" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32995495" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32995495" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
@@ -539,9 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -550,9 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -592,7 +584,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_PreProcessManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
+        <state relative-caret-position="705">
           <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -600,16 +592,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/Model/DeepBM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/Manager/ExFileManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-904">
+        <state relative-caret-position="435">
           <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
         </state>
       </provider>
@@ -626,18 +611,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="240">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/Model/GaussianBernoulliRBM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/Model/DeepBM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-394">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PerformanceManager.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+        <state relative-caret-position="836">
+          <caret line="85" column="27" lean-forward="true" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
           <folding>
             <element signature="e#16#34#0" expanded="true" />
           </folding>
@@ -648,16 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PerformanceManager.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/Model/GaussianBernoulliRBM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
