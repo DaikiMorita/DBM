@@ -7,7 +7,7 @@ import time
 import os
 
 from python3.Manager import PreProcessManager
-from python3.Manager import ExFileManager
+from python3.Manager import ExFileHandler
 from python3.Manager import DataProcessor
 from python3.Model import GaussianBernoulliRBM
 
@@ -31,7 +31,7 @@ class MainController(object):
         # TO DO: is there any way automatically to create instances like java spring @Autowired?
         self.data_process_manager = DataProcessor.DataProcessor()
         self.pre_process_manager = PreProcessManager.PreProcessManager()
-        self.ex_file_manager = ExFileManager.ExFileManager()
+        self.ex_file_handler = ExFileHandler.ExFileHandler()
 
     # To Do: conduct integration test as much as possible
     def start_main_pricess(self):
@@ -56,15 +56,25 @@ class MainController(object):
         # 2. Reads data #
         #################
 
-        # all_labels, all_data, each_label_data = self.read_data(self.app_conf["Setting"]["path_data_dir"])
+        # num_all_data: float scalar, total amount of data
+        # all_data_array: 2-d list (dim: num_all_data * each data dimension)
+        all_labels, all_data = self.ex_file_handler.read_img_all_data_labels(self.app_conf["Setting"]["path_data_dir"])
 
         ##################
         # 3. Pre-process #
         ##################
 
-        # data_train_batch, label_train_batch, data_train, data_test = self.pre_process_data(all_labels, all_data,
-        #                                                                                    self.learn_conf["General"][
-        #                                                                                        "ini_batch_size"])
+        # [1] Normalizes data
+        all_data = self.data_process_manager.z_score_normalization(all_data)
+
+        data_train, data_test, label_train, label_test = train_test_split(all_data, all_labels, test_size=0.3,
+                                                                          shuffle=True)
+
+        # [2] makes mini-batches where data with different labels will be contained at the almost same rate.
+        data_train_batch = self.data_process_manager.make_mini_batch(data_train,
+                                                                     self.learn_conf["General"]["mini_batch_size"])
+        label_train_batch = self.data_process_manager.make_mini_batch(label_train,
+                                                                      self.learn_conf["General"]["mini_batch_size"])
 
         ###############
         # 4. Learning #
@@ -92,41 +102,6 @@ class MainController(object):
         ##################
         # 8. Finished !! #
         ##################
-
-    def read_data(self, path_train_dirs):
-        """
-        Reads data.
-        :return: num_all_data, all_data_array, each_label_data_array
-        """
-
-        # num_all_data: float scalar, total amount of data
-        # all_data_array: 2-d list (dim: num_all_data * each data dimension)
-        # each_label_data_array: 3-d list (dim: num_label*num_all_data * each data dimension)
-        formatted_labels, formatted_data, each_label_data = self.ex_file_manager.read_image_data(path_train_dirs)
-
-        return formatted_labels, formatted_data, each_label_data
-
-    def pre_process_data(self, all_labels, all_data, mini_batch_size):
-        """
-        Pre-process od data
-        [1] Normalizes data (changes it into data with mean 0 and variance 1)
-        [2] Makes mini batches
-        [3] Makes a dictionary with keys for learning
-        :param all_data_array: 2-d list (dim: num all data * data dimension)
-        :return: all_data, dict_data_parameter
-        """
-
-        # [1] Normalizes data
-        all_data = self.data_process_manager.z_score_normalization(all_data)
-
-        data_train, data_test, label_train, label_test = train_test_split(all_data, all_labels, test_size=0.1,
-                                                                          shuffle=True)
-
-        # [2] makes mini-batches where data with different labels will be contained at the almost same rate.
-        data_train_batch = self.data_process_manager.make_mini_batch(data_train, mini_batch_size)
-        label_train_batch = self.data_process_manager.make_mini_batch(label_train, mini_batch_size)
-
-        return data_train_batch, label_train_batch, data_train, data_test
 
     def CD_learning(self, mini_batch):
         """
@@ -216,10 +191,10 @@ class MainController(object):
         """
 
         # [1] Saves learning results
-        self.ex_file_manager.numpy_array_save(os.path.join(self.dir_for_saving_result, 'C'), C)
-        self.ex_file_manager.numpy_array_save(os.path.join(self.dir_for_saving_result, 'B'), B)
-        self.ex_file_manager.numpy_array_save(os.path.join(self.dir_for_saving_result, 'sigma'), sigma)
-        self.ex_file_manager.numpy_array_save(os.path.join(self.dir_for_saving_result, 'W'), W)
+        self.ex_file_handler.np_arr_save(os.path.join(self.dir_for_saving_result, 'C'), C)
+        self.ex_file_handler.np_arr_save(os.path.join(self.dir_for_saving_result, 'B'), B)
+        self.ex_file_handler.np_arr_save(os.path.join(self.dir_for_saving_result, 'sigma'), sigma)
+        self.ex_file_handler.np_arr_save(os.path.join(self.dir_for_saving_result, 'W'), W)
 
         # [2] makes images of arrays
         for index, W in enumerate(W):

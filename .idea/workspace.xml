@@ -11,11 +11,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.git" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.git" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../README.git">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="405">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Controller/MainController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="100" column="25" selection-start-line="99" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExFileHandler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/ExFileHandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -35,7 +56,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DBM/discover.py" />
         <option value="$PROJECT_DIR$/DBM/config.ini.py" />
         <option value="$PROJECT_DIR$/DBM/config.ini" />
         <option value="$PROJECT_DIR$/DBM/test/ViewerTest/test_Viewer.py" />
@@ -86,6 +106,7 @@
         <option value="$PROJECT_DIR$/../DBM/test/ManagerTest/test_ExFileHandler.py" />
         <option value="$PROJECT_DIR$/../DBM/test/ManagerTest/test_DataProcessManager.py" />
         <option value="$PROJECT_DIR$/../README.git" />
+        <option value="$PROJECT_DIR$/../DBM/src/python3/Controller/MainController.py" />
       </list>
     </option>
   </component>
@@ -133,14 +154,17 @@
               <item name="." type="b2602c69:ProjectViewProjectNode" />
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="python3" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="." type="b2602c69:ProjectViewProjectNode" />
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="ManagerTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="python3" type="462c0819:PsiDirectoryNode" />
+              <item name="Manager" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -355,8 +379,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DBM/src/Controller/LearningManager.py" />
-    <entry file="file://$PROJECT_DIR$/DBM/src/Controller/LearningController.py" />
     <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PreProcessManager.py" />
     <entry file="file://$PROJECT_DIR$/DBM/test/suite.py" />
     <entry file="file://$PROJECT_DIR$/DBM/src/Model/GaussianBernoulliRBM.py" />
@@ -457,8 +479,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../README.git">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/ExFileHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Controller/MainController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="100" column="25" selection-start-line="99" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
