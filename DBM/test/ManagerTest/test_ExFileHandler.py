@@ -27,7 +27,7 @@ class TestExFileManager(unittest.TestCase):
         """
 
         expected = 2
-        actual = self.ex_file_handler.count_empty_file("test_data/test")
+        actual = self.ex_file_handler.count_empty_file("./test_data/test")
 
         self.assertEqual(expected, actual)
 
@@ -38,7 +38,7 @@ class TestExFileManager(unittest.TestCase):
         """
 
         expected = 3
-        actual = self.ex_file_handler.count_up_data_num("test_data/test")
+        actual = self.ex_file_handler.count_up_data_num("./test_data/test")
 
         self.assertEqual(expected, actual)
 
@@ -48,7 +48,7 @@ class TestExFileManager(unittest.TestCase):
         :return:
         """
         expected = [1.0] * 2500
-        actual = self.ex_file_handler.normalized_img_list(os.path.join("test_data/test_img", "white"))
+        actual = self.ex_file_handler.normalized_img_list(os.path.join("./test_data/test_img", "white"))
         self.assertEqual(expected, actual)
 
     def test_get_data_dir(self):
@@ -58,7 +58,7 @@ class TestExFileManager(unittest.TestCase):
         """
 
         expected = [[0.0] * 2500, [1.0] * 2500]
-        actual = self.ex_file_handler.get_data_in_dir("test_data/test_img")
+        actual = self.ex_file_handler.get_data_in_dir("./test_data/test_img")
         self.assertEqual(expected, actual)
 
     def test_get_image_width_height(self):
@@ -67,19 +67,19 @@ class TestExFileManager(unittest.TestCase):
         :return:
         """
         expected = (50, 50)
-        actual = self.ex_file_handler.get_image_width_height(os.path.join("test_data/test_img", "black"))
+        actual = self.ex_file_handler.get_image_width_height(os.path.join("./test_data/test_img", "black"))
         self.assertEqual(expected, actual)
 
-    def tesr_write_to_file(self):
+    def test_write_to_file(self):
         """
         test write to file
         :return:
         """
 
-        self.ex_file_handler.write_to_file("test_data", "test_data")
+        self.ex_file_handler.write_to_file("Hello!!", "./test_data/hello")
         expected = True
 
-        actual = os.path.isfile(os.path.join("test_data", "test"))
+        actual = os.path.isfile(os.path.join("./test_data", "hello"))
         self.assertEqual(expected, actual)
 
     def test_np_arr_save(self):
@@ -88,9 +88,9 @@ class TestExFileManager(unittest.TestCase):
         :return:
         """
 
-        self.ex_file_handler.np_arr_save("test_data", "test", np.array([1, 2, 3]))
+        self.ex_file_handler.np_arr_save("./test_data", "test", np.array([1, 2, 3]))
         expected = True
-        actual = os.path.isfile(os.path.join("test_data", "test.npy"))
+        actual = os.path.isfile(os.path.join("./test_data", "test.npy"))
         self.assertEqual(expected, actual)
 
     def test_read_img_all_data_labels(self):
@@ -99,7 +99,7 @@ class TestExFileManager(unittest.TestCase):
         :return:
         """
 
-        labels, data = self.ex_file_handler.read_img_all_data_labels(os.path.join("test_data", "img_dirs"))
+        labels, data = self.ex_file_handler.read_img_all_data_labels(os.path.join("./test_data", "img_dirs"))
 
         labels.sort()
         actual_1 = labels
