@@ -35,6 +35,7 @@ jobs:
           command: |
               . venv/bin/activate
               python setup.py test
+              working_directory: . venv/bin/activate/DBM/test
 
       - store_artifacts:
           path: test-reports
