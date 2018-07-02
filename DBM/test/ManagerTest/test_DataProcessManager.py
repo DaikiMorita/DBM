@@ -67,9 +67,9 @@ class DataProcessManagerTest(unittest.TestCase):
 
         arr = np.ones((100, 100))
         filename = "test_save_numpy_array"
-        path = ""
+        path = "DBM/test/ManagerTest/test_data"
 
-        self.data_process_manager.save_numpy_array(arr, filename, path)
+        self.data_process_manager.save_numpy_array(arr, path, filename)
 
         expected = True
         actual = os.path.isfile(os.path.join(path, filename + ".npy"))

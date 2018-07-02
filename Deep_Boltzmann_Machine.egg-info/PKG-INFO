@@ -1,9 +1,9 @@
 Metadata-Version: 1.0
 Name: Deep-Boltzmann-Machine
 Version: 0.1
-Summary: UNKNOWN
-Home-page: UNKNOWN
-Author: UNKNOWN
+Summary: Deep Boltzmann Machine, referring a paper called'Efficient Learning of Deep Boltzmann Machines' by Salakhutdinov and Larochelle in 2010
+Home-page: https://github.com/DaikiMorita/RBM
+Author: Daiki Morita
 Author-email: UNKNOWN
 License: UNKNOWN
 Description: UNKNOWN
