@@ -8,7 +8,7 @@ import os
 
 from python3.Manager import PreProcessManager
 from python3.Manager import ExFileManager
-from python3.Manager import DataProcessManager
+from python3.Manager import DataProcessor
 from python3.Model import GaussianBernoulliRBM
 
 
@@ -29,7 +29,7 @@ class MainController(object):
                                                   datetime.now().strftime("%Y-%m-%d_%H:%M:%S"))
 
         # TO DO: is there any way automatically to create instances like java spring @Autowired?
-        self.data_process_manager = DataProcessManager.DataProcessManager()
+        self.data_process_manager = DataProcessor.DataProcessor()
         self.pre_process_manager = PreProcessManager.PreProcessManager()
         self.ex_file_manager = ExFileManager.ExFileManager()
 
@@ -44,7 +44,13 @@ class MainController(object):
         # 1. Preparation #
         ##################
 
-        self.preparation()
+        # [1] makes a dir for saving results
+        self.data_process_manager.make_dir("", self.dir_for_saving_result)
+
+        # [2] copy learning.ini into a result dir
+        self.data_process_manager.copy_file(os.path.join(self.app_conf["Setting"]["path_learn_ini"],
+                                                         self.app_conf["Setting"]["name_learn_ini"]),
+                                            self.dir_for_saving_result)
 
         #################
         # 2. Reads data #
@@ -86,23 +92,6 @@ class MainController(object):
         ##################
         # 8. Finished !! #
         ##################
-
-    def preparation(self):
-        """
-        Preparation.
-        [1] Makes a dir for saving results.
-        [2] Copies config file
-        :return: None
-
-        """
-
-        # [1] makes a dir for saving results
-        self.data_process_manager.make_dir("", self.dir_for_saving_result)
-
-        # [2] copy learning.ini into a result dir
-        self.data_process_manager.copy_file(os.path.join(self.app_conf["Setting"]["path_learn_ini"],
-                                                         self.app_conf["Setting"]["name_learn_ini"]),
-                                            self.dir_for_saving_result)
 
     def read_data(self, path_train_dirs):
         """
@@ -225,8 +214,6 @@ class MainController(object):
         :param W: weight
         :return: None
         """
-
-        self.viewer.display_message("Results saving Starts\n")
 
         # [1] Saves learning results
         self.ex_file_manager.numpy_array_save(os.path.join(self.dir_for_saving_result, 'C'), C)

@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image
 
 
-class ExFileManager(object):
+class ExFileHandler(object):
     """
     Manages external files
     """
@@ -18,64 +18,72 @@ class ExFileManager(object):
         # Reads .config.ini
         ini_file = configparser.ConfigParser()
 
-    def read_image_data(self, path_all_dirs):
+    def read_img_all_data_labels(self, path_all_dirs):
         """
         Reads data.
         This method can be applied especially when you try to read "image"s.
         :return: num_all_data, formated_data, each_label_data
         """
 
-        num_all_data = 0
         all_data = []
         all_labels = []
-        each_label_data = []
 
         for dir in os.listdir(path_all_dirs):
-            num_data, data = self.get_data(os.path.join(path_all_dirs, dir))
-            labels = [dir] * num_data
+            path_to_data = os.path.join(path_all_dirs, dir)
+
+            labels = [dir] * self.count_up_data_num(path_to_data)
+            data = self.get_data_in_dir(path_to_data)
 
             all_labels.append(labels)
             all_data.append(data)
-            each_label_data.append([dir, data])
 
         # all_data_array above was organized like [[data with label A],[data with label B]....]
         # a format like [data with label A, data with label B,...] is easy to use.
         # For example, for shuffling or making mini-batch.
-        formatted_labels = []
-        formatted_data = []
+        flattened_labels = []
+        flattened_data = []
         for labels, data in zip(all_labels, all_data):
 
             for label in labels:
-                formatted_labels.append(label)
+                flattened_labels.append(label)
 
             for datum in data:
-                formatted_data.append(datum)
+                flattened_data.append(datum)
 
-        return formatted_labels, formatted_data, each_label_data
+        return flattened_labels, flattened_data
 
-    def get_data(self, path_to_data):
+    def get_data_in_dir(self, path_to_data_dir):
         """
         Gets all data in the all dirs which exist in the specified dir.
-        :param path_to_data: path to the dir where all dirs with data exist
+        :param path_to_data_dir: path to the dir where all dirs with data exist
         :return: 1st: a float scalar meaning the total amount of data
                  2nd: numpy array where all data are stored. Each row corresponds to an data
         """
 
-        # Counts up the number of non-0-size data.
-        num_data = self.count_up_data_num(path_to_data)
-
         data_array = []
 
-        for data in tqdm.tqdm(os.listdir(path_to_data)):
+        for data in tqdm.tqdm(os.listdir(path_to_data_dir)):
 
-            # skip if the file's sile is 0
-            try:
-                if os.stat(os.path.join(path_to_data, data)).st_size != 0:
-                    data_array.append(self.image_data_pre_process(os.path.join(path_to_data, data)))
-            except OSError:
-                num_data -= 1
+            path_to_data = os.path.join(path_to_data_dir, data)
 
-        return num_data, data_array
+            if os.stat(path_to_data).st_size != 0:
+                data_array.append(self.normalized_img_list(path_to_data))
+
+        return data_array
+
+    def normalized_img_list(self, path_to_image):
+
+        img = Image.open(path_to_image)
+        width, height = img.size
+        return [img.getpixel((i, j)) / 255 for j in range(height) for i in range(width)]
+
+    def count_up_data_num(self, dir):
+        """
+        Counts up the number of non-0-size files in a folder
+        :param dir: folder name where you want to know the amount of files
+        :return: the number of files in the folder
+        """
+        return len(os.listdir(dir)) - self.count_empty_file(dir)
 
     def count_empty_file(self, dir):
         """
@@ -86,20 +94,6 @@ class ExFileManager(object):
 
         return len([index for index, file in enumerate(os.listdir(dir)) if
                     os.stat(os.path.join(dir, file)).st_size == 0])
-
-    def count_up_data_num(self, dir):
-        """
-        Counts up the number of non-0-size files in a folder
-        :param dir: folder name where you want to know the amount of files
-        :return: the number of files in the folder
-        """
-        return len(os.listdir(dir)) - self.count_empty_file(dir)
-
-    def image_data_pre_process(self, path_to_image):
-
-        img = Image.open(path_to_image)
-        width, height = img.size
-        return [img.getpixel((i, j)) / 255 for j in range(height) for i in range(width)]
 
     def get_image_width_height(self, path_to_image):
         """
@@ -113,7 +107,7 @@ class ExFileManager(object):
 
         return width, height
 
-    def write_to_file(self, filename, data):
+    def write_to_file(self, data, filename):
         """
 
         :param filename:
@@ -124,12 +118,13 @@ class ExFileManager(object):
         with open(filename, mode='a', encoding='utf-8') as fh:
             fh.write('%s\n' % data)
 
-    def numpy_array_save(self, filename, array):
+    def np_arr_save(self, path, filename, array):
         """
         Saves numpy array into a directory.
+        :param path: path
         :param filename: filename
         :param array: array to be saved
         :return: None
         """
 
-        np.save('%s.npy' % filename, array)
+        np.save('%s.npy' % os.path.join(path, filename), array)

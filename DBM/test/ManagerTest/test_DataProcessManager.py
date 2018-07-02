@@ -1,9 +1,8 @@
 import unittest
 import numpy as np
 import numpy.testing as npt
-from DBM.src.python3.Manager import DataProcessManager
+from DBM.src.python3.Manager import DataProcessor
 import os
-
 
 
 class DataProcessManagerTest(unittest.TestCase):
@@ -16,7 +15,7 @@ class DataProcessManagerTest(unittest.TestCase):
         procedures before every tests are started. This code block is executed only once.
         :return:
         """
-        self.data_process_manager = DataProcessManager.DataProcessManager()
+        self.data_process_manager = DataProcessor.DataProcessor()
 
     def test_z_score_normalization(self):
         """

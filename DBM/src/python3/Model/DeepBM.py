@@ -31,30 +31,27 @@ class DeepBM(object):
     def greedy_pre_training(self):
         pass
 
+    # we can run this block without "for" loop, using a matrix calculation
     def variational_inference(self):
         pass
 
     # To Do: eq. (8)~(10)
-    # deterministic, hence possible in C/C++
     def sigmoid_activation(self):
         pass
 
     # To Do: eq. (8)~(10)
-    # deterministic, hence possible in C/C++
     def calc_bottom_up_pass(self):
         pass
 
     # To Do: eq. (4)~(6)
-    # deterministic, hence possible in C/C++
     def solve_mean_field_fixed_point_equation(self):
         pass
 
     # To Do: eq. (11)
-    # deterministic, hence possible in C/C++
     def calc_KL_divergence(self):
         pass
 
-    # stochastic, hence may be better in python
+    # we can run this block without "for" loop, using a matrix calculation
     def stochastic_approximation(self):
         pass
 

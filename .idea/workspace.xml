@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/DBM/src/python3/Manager/DataReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/python3/Manager/DataReader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBM/src/python3/Manager/PostProcessManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBM/src/python3/Manager/PostProcessManager.py" afterDir="false" />
-    </list>
+    <list default="true" id="69b38e81-ab3d-479b-8c9c-7e8ca6650723" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,18 +10,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="DataReader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/DataReader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreProcessManager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/PreProcessManager.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PreProcessManager.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/PreProcessManager.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
@@ -32,31 +20,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="90">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <file leaf-file-name="DataProcessor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/DataProcessor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="405">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_DataProcessManager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../DBM/test/ManagerTest/test_DataProcessManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParamSetController.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Controller/ParamSetController.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="PostProcessManager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/PostProcessManager.py">
+        <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/PostProcessManager.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
               <folding>
                 <element signature="e#16#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Controller/MainController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="960">
+              <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LineNotifier.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/LineNotifier.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#15#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,23 +103,11 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DBM/console_scripts/Application.py" />
-        <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/SamplingManager.py" />
-        <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/LoggingManager.py" />
-        <option value="$PROJECT_DIR$/DBM/console_scripts/Model/Params.py" />
-        <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/GaussianBinaryRBM.py" />
-        <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/GaussianBernoulliRBM.py" />
-        <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/LineNotifier.py" />
-        <option value="$PROJECT_DIR$/DBM/console_scripts/Manager/PreProcessManager.py" />
-        <option value="$PROJECT_DIR$/DBM/console_scripts/__init__.py" />
-        <option value="$PROJECT_DIR$/.circleci/config.yml" />
-        <option value="$PROJECT_DIR$/DBM/src/Manager/ExfileManager.py" />
-        <option value="$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py" />
         <option value="$PROJECT_DIR$/DBM/logging.conf" />
         <option value="$PROJECT_DIR$/DBM/src/LogConfig.py" />
         <option value="$PROJECT_DIR$/DBM/test/suite.py" />
@@ -128,14 +147,26 @@
         <option value="$PROJECT_DIR$/DBM/src/python3/Controller/MainController.py" />
         <option value="$PROJECT_DIR$/DBM/src/python3/Manager/PostProcessManager.py" />
         <option value="$PROJECT_DIR$/DBM/src/python3/Manager/DataReader.py" />
+        <option value="$PROJECT_DIR$/../DBM/src/python3/Model/DeepBM.py" />
+        <option value="$PROJECT_DIR$/../DBM/src/python3/Manager/PerformanceManager.py" />
+        <option value="$PROJECT_DIR$/../DBM/src/python3/Manager/Evaluator.py" />
+        <option value="$PROJECT_DIR$/../DBM/src/python3/Manager/DataVisualizer.py" />
+        <option value="$PROJECT_DIR$/../DBM/src/python3/Manager/DataProcessor.py" />
+        <option value="$PROJECT_DIR$/../DBM/test/ManagerTest/test_DataProcessManager.py" />
+        <option value="$PROJECT_DIR$/../DBM/src/python3/Controller/MainController.py" />
+        <option value="$PROJECT_DIR$/../DBM/src/python3/Manager/ExFileManager.py" />
+        <option value="$PROJECT_DIR$/../DBM/test/ManagerTest/test_ExFileManager.py" />
+        <option value="$PROJECT_DIR$/../requirements.txt" />
+        <option value="$PROJECT_DIR$/../DBM/src/python3/Manager/ExFileHandler.py" />
+        <option value="$PROJECT_DIR$/../DBM/test/ManagerTest/test_ExFileHandler.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2339" />
-    <option name="y" value="213" />
-    <option name="width" value="958" />
-    <option name="height" value="1076" />
+    <option name="x" value="2304" />
+    <option name="y" value="40" />
+    <option name="width" value="956" />
+    <option name="height" value="1068" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -145,23 +176,85 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="DBM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="DBM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
               <item name="DBM" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="python3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="python3" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="python3" type="462c0819:PsiDirectoryNode" />
+              <item name="Manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="python3" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="ControllerTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="ManagerTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBM" type="462c0819:PsiDirectoryNode" />
+              <item name="Deep_Boltzmann_Machine.egg-info" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -188,86 +281,86 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_DataProcessManager.DataProcessManagerTest">
-    <configuration name="Unittests for PostProcessManagerTest.PostProcessManagerTest.test_save_numpy_array" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests for test_ExFileHandler.TestExFileManager.test_read_img_all_data_labels">
+    <configuration name="Unittests for test_ExFileHandler.TestExFileManager" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="DBM" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DBM/test/ManagerTest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../DBM/test/ManagerTest" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;PostProcessManagerTest.PostProcessManagerTest.test_save_numpy_array&quot;" />
+      <option name="_new_target" value="&quot;test_ExFileHandler.TestExFileManager&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for PreProcessManagerTest.PreProcessManagerTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_get_data_dir" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="DBM" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DBM/test/ManagerTest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../DBM/test/ManagerTest" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;PreProcessManagerTest.PreProcessManagerTest&quot;" />
+      <option name="_new_target" value="&quot;test_ExFileHandler.TestExFileManager.test_get_data_dir&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for test_DataProcessManager.DataProcessManagerTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_get_image_width_height" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="DBM" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DBM/test/ManagerTest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../DBM/test/ManagerTest" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_DataProcessManager.DataProcessManagerTest&quot;" />
+      <option name="_new_target" value="&quot;test_ExFileHandler.TestExFileManager.test_get_image_width_height&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for test_PreProcessManager.PreProcessManagerTest.test_copy_file" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_np_arr_save" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="DBM" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DBM/test/ManagerTest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../DBM/test/ManagerTest" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_PreProcessManager.PreProcessManagerTest.test_copy_file&quot;" />
+      <option name="_new_target" value="&quot;test_ExFileHandler.TestExFileManager.test_np_arr_save&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for test_PreProcessManager.PreProcessManagerTest.test_make_dir" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_read_img_all_data_labels" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="DBM" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DBM/test/ManagerTest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../DBM/test/ManagerTest" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_PreProcessManager.PreProcessManagerTest.test_make_dir&quot;" />
+      <option name="_new_target" value="&quot;test_ExFileHandler.TestExFileManager.test_read_img_all_data_labels&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests for PreProcessManagerTest.PreProcessManagerTest" />
-      <item itemvalue="Python tests.Unittests for PostProcessManagerTest.PostProcessManagerTest.test_save_numpy_array" />
-      <item itemvalue="Python tests.Unittests for test_PreProcessManager.PreProcessManagerTest.test_make_dir" />
-      <item itemvalue="Python tests.Unittests for test_PreProcessManager.PreProcessManagerTest.test_copy_file" />
-      <item itemvalue="Python tests.Unittests for test_DataProcessManager.DataProcessManagerTest" />
+      <item itemvalue="Python tests.Unittests for test_ExFileHandler.TestExFileManager" />
+      <item itemvalue="Python tests.Unittests for test_ExFileHandler.TestExFileManager.test_get_data_dir" />
+      <item itemvalue="Python tests.Unittests for test_ExFileHandler.TestExFileManager.test_get_image_width_height" />
+      <item itemvalue="Python tests.Unittests for test_ExFileHandler.TestExFileManager.test_np_arr_save" />
+      <item itemvalue="Python tests.Unittests for test_ExFileHandler.TestExFileManager.test_read_img_all_data_labels" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for test_DataProcessManager.DataProcessManagerTest" />
-        <item itemvalue="Python tests.Unittests for test_PreProcessManager.PreProcessManagerTest.test_copy_file" />
-        <item itemvalue="Python tests.Unittests for test_PreProcessManager.PreProcessManagerTest.test_make_dir" />
-        <item itemvalue="Python tests.Unittests for PostProcessManagerTest.PostProcessManagerTest.test_save_numpy_array" />
-        <item itemvalue="Python tests.Unittests for PreProcessManagerTest.PreProcessManagerTest" />
+        <item itemvalue="Python tests.Unittests for test_ExFileHandler.TestExFileManager.test_read_img_all_data_labels" />
+        <item itemvalue="Python tests.Unittests for test_ExFileHandler.TestExFileManager" />
+        <item itemvalue="Python tests.Unittests for test_ExFileHandler.TestExFileManager.test_np_arr_save" />
+        <item itemvalue="Python tests.Unittests for test_ExFileHandler.TestExFileManager.test_get_image_width_height" />
+        <item itemvalue="Python tests.Unittests for test_ExFileHandler.TestExFileManager.test_get_data_dir" />
       </list>
     </recent_temporary>
   </component>
@@ -285,44 +378,45 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_PreProcessManager_PreProcessManagerTest_test_make_dir - 2018.07.01 at 09h 43m 42s.xml">
-      <configuration name="Unittests for test_PreProcessManager.PreProcessManagerTest.test_make_dir" configurationId="tests" />
+    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager_test_get_image_width_height - 2018.07.02 at 22h 36m 48s.xml">
+      <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_get_image_width_height" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_PreProcessManager_PreProcessManagerTest_test_copy_file - 2018.07.01 at 09h 45m 35s.xml">
-      <configuration name="Unittests for test_PreProcessManager.PreProcessManagerTest.test_copy_file" configurationId="tests" />
+    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager - 2018.07.02 at 22h 37m 36s.xml">
+      <configuration name="Unittests for test_ExFileHandler.TestExFileManager" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_PreProcessManager_PreProcessManagerTest_test_copy_file - 2018.07.01 at 09h 46m 52s.xml">
-      <configuration name="Unittests for test_PreProcessManager.PreProcessManagerTest.test_copy_file" configurationId="tests" />
+    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager_test_get_image_width_height - 2018.07.02 at 22h 40m 16s.xml">
+      <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_get_image_width_height" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_PreProcessManager_PreProcessManagerTest_test_copy_file - 2018.07.01 at 09h 48m 17s.xml">
-      <configuration name="Unittests for test_PreProcessManager.PreProcessManagerTest.test_copy_file" configurationId="tests" />
+    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager_test_np_arr_save - 2018.07.02 at 22h 44m 08s.xml">
+      <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_np_arr_save" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_PreProcessManager_PreProcessManagerTest_test_make_dir - 2018.07.01 at 09h 51m 58s.xml">
-      <configuration name="Unittests for test_PreProcessManager.PreProcessManagerTest.test_make_dir" configurationId="tests" />
+    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager_test_read_img_all_data_labels - 2018.07.02 at 22h 54m 55s.xml">
+      <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_read_img_all_data_labels" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_PreProcessManager_PreProcessManagerTest_test_copy_file - 2018.07.01 at 10h 01m 20s.xml">
-      <configuration name="Unittests for test_PreProcessManager.PreProcessManagerTest.test_copy_file" configurationId="tests" />
+    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager - 2018.07.02 at 22h 55m 50s.xml">
+      <configuration name="Unittests for test_ExFileHandler.TestExFileManager" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_PreProcessManager_PreProcessManagerTest_test_copy_file - 2018.07.01 at 10h 01m 51s.xml">
-      <configuration name="Unittests for test_PreProcessManager.PreProcessManagerTest.test_copy_file" configurationId="tests" />
+    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager - 2018.07.02 at 22h 56m 03s.xml">
+      <configuration name="Unittests for test_ExFileHandler.TestExFileManager" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_PreProcessManager_PreProcessManagerTest_test_copy_file - 2018.07.01 at 10h 03m 57s.xml">
-      <configuration name="Unittests for test_PreProcessManager.PreProcessManagerTest.test_copy_file" configurationId="tests" />
+    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager_test_read_img_all_data_labels - 2018.07.02 at 22h 59m 31s.xml">
+      <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_read_img_all_data_labels" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_PreProcessManager_PreProcessManagerTest_test_copy_file - 2018.07.01 at 10h 04m 33s.xml">
-      <configuration name="Unittests for test_PreProcessManager.PreProcessManagerTest.test_copy_file" configurationId="tests" />
+    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager_test_read_img_all_data_labels - 2018.07.02 at 23h 00m 15s.xml">
+      <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_read_img_all_data_labels" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_DataProcessManager_DataProcessManagerTest - 2018.07.01 at 17h 36m 05s.xml">
-      <configuration name="Unittests for test_DataProcessManager.DataProcessManagerTest" configurationId="tests" />
+    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager_test_read_img_all_data_labels - 2018.07.02 at 23h 00m 35s.xml">
+      <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_read_img_all_data_labels" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="-11" width="1922" height="1092" extended-state="6" />
+    <frame x="1920" y="-4" width="1920" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416666" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25416666" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50073206" side_tool="true" weight="0.2112245" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38063064" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38061225" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -335,23 +429,23 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32995495" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38063064" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38063064" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32995495" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50073206" side_tool="true" weight="0.2112245" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -366,21 +460,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DBM/test/ManagerTest/test_DataProcessManager.py</url>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/PreProcessManagerTest.py" />
-    <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_EXFileManager.py" />
-    <entry file="file://$USER_HOME$/.pyenv/versions/anaconda3-5.2.0/lib/python3.6/unittest/case.py" />
-    <entry file="file://$PROJECT_DIR$/DBM/params.ini" />
-    <entry file="file://$PROJECT_DIR$/DBM/src/Manager/LineNotifier.py" />
     <entry file="file://$PROJECT_DIR$/DBM/src/Manager/LoggingManager.py" />
     <entry file="file://$PROJECT_DIR$/DBM/src/LogConfig.py" />
     <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_PreProcessManager.py" />
@@ -400,63 +483,34 @@
     <entry file="file://$PROJECT_DIR$/DBM/src/Model/DeepBM.py" />
     <entry file="file://$PROJECT_DIR$/DBM/src/Manager/LearningMonitor.py" />
     <entry file="file://$PROJECT_DIR$/DBM/src/Manager/PerformanceManager.py" />
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/SlackNotifier.py">
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/SlackNotifier.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/PerformanceManager.py">
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/LoggingManager.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/LoggingManager.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/LineNotifier.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/LearningMonitor.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Model/DeepBM.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Model/GaussianBernoulliRBM.py">
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Model/GaussianBernoulliRBM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="587">
           <caret line="275" selection-start-line="275" selection-end-line="275" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Application.py">
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Application.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/LogConfig.py">
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/LogConfig.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/ParamsConfig.py">
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/ParamsConfig.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_DataProcessManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/test/ManagerTest/test_ExFileManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/application.ini" />
-    <entry file="file://$PROJECT_DIR$/DBM/discover.py">
+    <entry file="file://$PROJECT_DIR$/../DBM/discover.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
@@ -464,86 +518,146 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBM/learning.ini" />
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Viewer/Viewer.py">
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Viewer/Viewer.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/logging.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/ExFileManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-          <folding>
-            <element signature="e#17#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/DataProcessManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Controller/ParamSetController.py">
+    <entry file="file://$PROJECT_DIR$/DBM/logging.conf" />
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Controller/LogController.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Controller/LogController.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Controller/MainController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/PostProcessManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-          <folding>
-            <element signature="e#16#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/DataReader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBM/src/python3/Manager/PreProcessManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
+    <entry file="file://$PROJECT_DIR$/../setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/PerformanceManager.py" />
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Model/DeepBM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="767">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/DataProcessManager.py" />
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/DataVisualizer.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/Evaluator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/LearningMonitor.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/LineNotifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#15#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Controller/ParamSetController.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/PostProcessManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+          <folding>
+            <element signature="e#16#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/DataProcessor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Controller/MainController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/DataReader.py" />
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/ExFileManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
+          <folding>
+            <element signature="e#17#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/test/ManagerTest/test_ExFileManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/test/ManagerTest/test_DataProcessManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/ExFileHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="31" column="59" selection-start-line="31" selection-start-column="59" selection-end-line="33" selection-end-column="58" />
+          <folding>
+            <element signature="e#17#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/test/ManagerTest/test_ExFileHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="94" column="10" selection-start-line="94" selection-start-column="10" selection-end-line="94" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/PreProcessManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>

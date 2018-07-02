@@ -3,7 +3,7 @@ import shutil
 import numpy as np
 
 
-class DataProcessManager(object):
+class DataProcessor(object):
     """
     This class provides various methods to process data
     """
