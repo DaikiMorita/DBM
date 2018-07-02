@@ -29,14 +29,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_ExFileHandler.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_ExFileHandler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../DBM/test/ManagerTest/test_ExFileHandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+            <state relative-caret-position="210">
+              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -84,11 +93,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParamSetController.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Controller/ParamSetController.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="PostProcessManager.py" pinned="false" current-in-tab="false">
@@ -382,12 +386,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager_test_read_img_all_data_labels - 2018.07.02 at 22h 54m 55s.xml">
-      <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_read_img_all_data_labels" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager - 2018.07.02 at 22h 55m 50s.xml">
-      <configuration name="Unittests for test_ExFileHandler.TestExFileManager" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager - 2018.07.02 at 22h 56m 03s.xml">
       <configuration name="Unittests for test_ExFileHandler.TestExFileManager" configurationId="tests" />
     </history-entry>
@@ -412,15 +410,21 @@
     <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager - 2018.07.02 at 23h 15m 06s.xml">
       <configuration name="Unittests for test_ExFileHandler.TestExFileManager" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager_test_count_empty_file - 2018.07.02 at 23h 17m 10s.xml">
+      <configuration name="Unittests for test_ExFileHandler.TestExFileManager.test_count_empty_file" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_ExFileHandler_TestExFileManager - 2018.07.02 at 23h 17m 21s.xml">
+      <configuration name="Unittests for test_ExFileHandler.TestExFileManager" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-4" width="1920" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25416666" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416666" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50073206" side_tool="true" weight="0.2112245" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33265308" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33265308" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -527,13 +531,6 @@
     <entry file="file://$PROJECT_DIR$/DBM/logging.conf" />
     <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Controller/LogController.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Manager/PerformanceManager.py" />
     <entry file="file://$PROJECT_DIR$/../DBM/src/python3/Model/DeepBM.py">
@@ -663,11 +660,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../DBM/test/ManagerTest/test_ExFileHandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+        <state relative-caret-position="210">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
