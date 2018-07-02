@@ -4,7 +4,7 @@ from DBM.src.python3.Manager import ExFileHandler
 import sys
 import numpy as np
 
-sys.path.append("DBM.test.ManagerTest")
+sys.path.append("./DBM/test/ManagerTest")
 
 
 class TestExFileManager(unittest.TestCase):
