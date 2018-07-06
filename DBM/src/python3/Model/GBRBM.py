@@ -75,31 +75,50 @@ class GaussianBernoulliRBM(object):
         # initialization of X_k
         X_k = np.array(mini_batch[0])
 
-        # CD Learning
+        # Contrastive Divergence Learning
         for e in tqdm.tqdm(range(0, max_epoch)):
-            #####################
-            # 1. Gibbs Sampling #
-            #####################
+            # Gibbs Sampling
             X = np.array(mini_batch[int(e % len(mini_batch))])
+            X_k = gibbs_sampling(X, X_k, W, B, C, Sigma,
+                                 learning_params["sampling_type"],
+                                 learning_params["sampling_times"])
 
-            X_k = gibbs_sampling(X, X_k, C, B, W, Sigma, learning_params["sampling_type"])
-
-            ######################
-            # 2. Gradient Update #
-            ######################
-
+            # Gradient Update
             X, X_k, W, B, C, Sigma, delta_C, delta_B, delta_W, rho_new = gradient_update(X, X_k, W, B, C, Sigma,
                                                                                          delta_C, delta_B, delta_W,
                                                                                          rho_new, learning_params)
-            # non negative limitation
+            # Non Negative Limitation
             W[W < 0] = 0
 
+        # Learned Model Parameters
         self.W = W
         self.B = B
         self.C = C
         self.Sigma = Sigma
 
-    def get_params(self):
+    def set_model_params(self, W, B, C, Sigma):
+        """
+
+        :param W:
+        :param B:
+        :param C:
+        :param Sigma:
+        :return:
+        """
+
+        if (W.shape == (self.num_h_unit, self.num_v_unit)
+                and B.shape == (1, self.num_v_unit)
+                and C.shape == (1, self.num_h_unit)
+                and Sigma.shape == (1, self.num_v_unit)):
+            self.W = W
+            self.B = B
+            self.C = C
+            self.Sigma = Sigma
+
+        else:
+            raise ArrNotMatchException("raise")
+
+    def get_model_params(self):
         """
 
         :return:
@@ -134,6 +153,7 @@ def make_mini_batch(data_list, mini_batch_size):
 
 def gradient_update(X, X_k, W_new, B_new, C_new, Sigma_new, delta_C, delta_B, delta_W, rho_new, learning_params):
     learning_rate = learning_params["learning_rate"]
+    sparse_regularization_target = learning_params["sparse_regularization_target"]
     sparse_regularization_rate = learning_params["sparse_regularization_rate "]
     momentum_rate = learning_params["momentum_rate"]
     weight_decay_rate = learning_params["weight_decay_rate "]
@@ -145,24 +165,24 @@ def gradient_update(X, X_k, W_new, B_new, C_new, Sigma_new, delta_C, delta_B, de
     B_old = B_new
     # W_old = W_new * self.spread_funcs
     W_old = W_new
-    sigma_old = Sigma_new
+    Sigma_old = Sigma_new
 
     rho_new, grad_E_sparse_W, grad_E_sparse_C = sparse_regularization(X,
-                                                                      C_old, W_old,
-                                                                      sigma_old, rho_old)
+                                                                      W_old, C_old,
+                                                                      Sigma_old, rho_old, sparse_regularization_target)
 
     C_new = C_old + learning_rate * (CD_C(P_H_1_X, P_H_1_X_k)
                                      - sparse_regularization_rate * grad_E_sparse_C) \
             + momentum_rate * delta_C
 
-    B_new = B_old + learning_rate * CD_B(X, X_k, sigma_old) \
+    B_new = B_old + learning_rate * CD_B(X, X_k, Sigma_old) \
             + momentum_rate * delta_B
 
     W_new = W_old + learning_rate * (CD_W(X, X_k, P_H_1_X, P_H_1_X_k,
-                                          sigma_old) - weight_decay_rate * W_old - sparse_regularization_rate * grad_E_sparse_W) \
+                                          Sigma_old) - weight_decay_rate * W_old - sparse_regularization_rate * grad_E_sparse_W) \
             + momentum_rate * delta_W
 
-    sigma_new = sigma_old
+    sigma_new = Sigma_old
 
     delta_C = C_new - C_old
     delta_B = B_new - B_old
@@ -171,7 +191,7 @@ def gradient_update(X, X_k, W_new, B_new, C_new, Sigma_new, delta_C, delta_B, de
     return X, X_k, W_new, B_new, C_new, sigma_new, delta_C, delta_B, delta_W, rho_new
 
 
-def gibbs_sampling(X, X_k, C_new, B_new, W_new, sigma_new, sampling_type):
+def gibbs_sampling(X, X_k, W, B, C, Sigma, sampling_type, sampling_times):
     """
 
     :param X:
@@ -183,16 +203,16 @@ def gibbs_sampling(X, X_k, C_new, B_new, W_new, sigma_new, sampling_type):
     :return:
     """
 
-    if sampling_type == 'CD':
-        X_k = block_gibbs_sampling(X, C_new, B_new, W_new, sigma_new)
+    if sampling_type == 'PCD':
+        X_k = block_gibbs_sampling(X, W, B, C, Sigma, sampling_times)
 
-    elif sampling_type == 'PCD':
-        X_k = block_gibbs_sampling(X_k, C_new, B_new, W_new, sigma_new)
+    elif sampling_type == 'CD':
+        X_k = block_gibbs_sampling(X_k, W, B, C, Sigma, sampling_times)
 
     return X_k
 
 
-def sparse_regularization(X, C, W, sigma, rho_old, sparse_regularization_target):
+def sparse_regularization(X, W, C, sigma, rho_old, sparse_regularization_target):
     """
 
     :param sparse_regularization:
@@ -225,7 +245,7 @@ def sparse_regularization(X, C, W, sigma, rho_old, sparse_regularization_target)
     return rho_new, delta_E_sparse_W, delta_E_sparse_C
 
 
-def block_gibbs_sampling(X, C, B, W, sigma, sampling_times):
+def block_gibbs_sampling(X, W, B, C, sigma, sampling_times):
     """
     Block Gibbs Sampling
     :param X: values of visible (dim: num data * num visible units)
@@ -358,3 +378,8 @@ def CD_Sigma(X, X_k, P_H_1_X, P_H_1_X_k, B, W, Sigma):
     E_2_2 = np.sum(np.diag(np.dot(X_k, np.transpose(W)) * P_H_1_X_k))
 
     return (E_1_1 - 2 * E_1_2 - E_2_1 + 2 * E_2_2) / (X.shape[0] * Sigma * Sigma * Sigma)
+
+
+class ArrNotMatchException(Exception):
+    def my_func(self):
+        print("Array size does not match the vector size of h and v units")
