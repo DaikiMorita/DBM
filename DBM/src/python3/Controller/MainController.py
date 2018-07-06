@@ -11,7 +11,6 @@ from python3.Manager import ExFileHandler
 from python3.Manager import DataProcessor
 from python3.Model import GaussianBernoulliRBM
 
-
 class MainController(object):
     """
     Controls main process

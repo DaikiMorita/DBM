@@ -28,43 +28,57 @@ class DeepBM(object):
 
         pass
 
-    def greedy_pre_training(self):
+    def get_W(self):
         pass
 
-    # we can run this block without "for" loop, using a matrix calculation
-    def variational_inference(self):
-        pass
 
-    # To Do: eq. (8)~(10)
-    def sigmoid_activation(self):
-        pass
+def greedy_pre_training():
+    pass
 
-    # To Do: eq. (8)~(10)
-    def calc_bottom_up_pass(self):
-        pass
 
-    # To Do: eq. (4)~(6)
-    def solve_mean_field_fixed_point_equation(self):
-        pass
+# we can run this block without "for" loop, using a matrix calculation
+def variational_inference():
+    pass
 
-    # To Do: eq. (11)
-    def calc_KL_divergence(self):
-        pass
 
-    # we can run this block without "for" loop, using a matrix calculation
-    def stochastic_approximation(self):
-        pass
+# To Do: eq. (8)~(10)
+def sigmoid_activation():
+    pass
 
-    # stochastic, hence may be better in python
-    def gibbs_sampler(self):
-        pass
 
-    def parameter_update(self):
-        pass
+# To Do: eq. (8)~(10)
+def calc_bottom_up_pass():
+    pass
 
-    # To Do: inside () at parameter_update
-    def calc_gradient(self):
-        pass
 
-    def decrease_alpha(self):
-        pass
+# To Do: eq. (4)~(6)
+def solve_mean_field_fixed_point_equation():
+    pass
+
+
+# To Do: eq. (11)
+def calc_KL_divergence():
+    pass
+
+
+# we can run this block without "for" loop, using a matrix calculation
+def stochastic_approximation():
+    pass
+
+
+# stochastic, hence may be better in python
+def gibbs_sampler():
+    pass
+
+
+def parameter_update():
+    pass
+
+
+# To Do: inside () at parameter_update
+def calc_gradient():
+    pass
+
+
+def decrease_alpha():
+    pass
