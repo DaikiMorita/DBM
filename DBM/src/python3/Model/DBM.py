@@ -1,3 +1,7 @@
+# coding=utf-8
+import numpy as np
+
+
 class DeepBM(object):
     """
     Deep Boltzmann Machine
@@ -13,23 +17,48 @@ class DeepBM(object):
     # somewhere with less matrix calculation or with too many "for" loops should be done by C/C++.
     # numpy is good at matrix calculation but runs too slowly inside "for" loop.
 
-    def __init__(self, num_hidden_layer):
-        self.num_hidden_layer = num_hidden_layer
+    def __init__(self, num_v_unit, num_h_layer, num_h_unit):
+        self.num_v_unit = num_v_unit
+        self.num_h_layer = num_h_layer
+        self.num_h_unit = num_h_unit
+
+        self.W = np.ones((self.num_h_layer, self.num_h_unit, self.num_v_unit))
+        self.R = np.ones((self.num_h_layer, self.num_h_unit, self.num_v_unit))
 
     # To Do: this code block below will control the whole learning process described in the article.
-    def learning(self):
+    def learning(self, train_data, max_epoch, mini_batch_size=10, sampling_type="PCD", sampling_times=10,
+                 learning_rate=0.01):
         # call pre_training
 
         # iterate T times below
         # variational_inference
+        NU = calc_bottom_up_pass(R, V)
+        MU = solve_mean_field_fixed_point_equation(W, V, mu, ite_K)
+
         # stochastic_approximation
         # parameter_update
         # decrease_alpha
 
-        pass
+    pass
 
-    def get_W(self):
-        pass
+    def get_model_params(self):
+        """
+
+        :return:
+        """
+        return self.W
+
+    def set_model_params(self, W):
+        """
+
+        :param W:
+        :return:
+        """
+
+        if W.shape == (self.num_h_layer, self.num_h_unit, self.num_v_unit):
+            self.W = W
+        else:
+            raise ArrNotMatchException("raise")
 
 
 def greedy_pre_training():
@@ -42,18 +71,55 @@ def variational_inference():
 
 
 # To Do: eq. (8)~(10)
-def sigmoid_activation():
-    pass
+def sigmoid_activation(X):
+    """
+
+    :param X:
+    :return:
+    """
+    return 1 / (1 + np.exp(-X))
 
 
 # To Do: eq. (8)~(10)
-def calc_bottom_up_pass():
-    pass
+def calc_bottom_up_pass(R, V):
+    """
+
+    :param R:
+    :param V:
+    :return:
+    """
+    num_h_layer = R.shape[0]
+
+    # compensation for the lack of top-down feedback except the top layer
+    comp = 2
+    nu = V
+    NU = []
+    for n_h_l, r in enumerate(R):
+
+        if n_h_l == num_h_layer:
+            comp = 1
+
+        nu = sigmoid_activation(np.sum(comp * r * nu, axis=1, keepdims=True))
+        NU.append(nu)
+
+    return NU
 
 
 # To Do: eq. (4)~(6)
-def solve_mean_field_fixed_point_equation():
-    pass
+def solve_mean_field_fixed_point_equation(W, V, mu, ite_K):
+    num_h_layer = W.shape[0]
+    num_h_unit = W.shape[1]
+    MU = []
+    mu = V
+    for k in list(range(ite_K)):
+        for n_h_l in list(range(num_h_layer)):
+            if n_h_l == num_h_layer:
+                mu = sigmoid_activation(np.sum(W[n_h_l] * mu[n_h_l - 1], keepdims=True))
+            else:
+                mu = sigmoid_activation(np.sum(W[n_h_l] * mu, keepdims=True) + np.sum(W[n_h_l + 1] * mu[n_h_l + 1]))
+
+            MU.append(mu)
+    return MU
 
 
 # To Do: eq. (11)
@@ -82,3 +148,8 @@ def calc_gradient():
 
 def decrease_alpha():
     pass
+
+
+class ArrNotMatchException(Exception):
+    def my_func(self):
+        print("Array size does not match the vector size of h and v units")
