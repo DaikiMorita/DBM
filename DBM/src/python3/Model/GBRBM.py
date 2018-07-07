@@ -135,6 +135,13 @@ class GaussianBernoulliRBM(object):
         """
         return self.W, self.B, self.C, self.Sigma
 
+    def get_W(self):
+        """
+
+        :return:
+        """
+        return self.W
+
 
 def make_mini_batch(data_list, mini_batch_size):
     """
