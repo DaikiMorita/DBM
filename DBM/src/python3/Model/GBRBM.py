@@ -9,15 +9,14 @@ class GaussianBernoulliRBM(object):
     """
     Gaussian Bernoulli Restricted Boltzmann Machine
     Visible units and hidden units are modeled with Gaussian and Bernoulli distribution, respectively.
-    Therefore, this machine can be applied into real values data without transforming the data into binary data.
+    Therefore, this machine can be applied into real-value data without transforming the data into binary data.
     """
 
-    # TO DO: is there any way automatically to create constructor like java-lombok?
     def __init__(self, num_v_unit, num_h_unit):
         """
 
-        :param num_v_unit:
-        :param num_h_unit:
+        :param num_v_unit: number of visible units
+        :param num_h_unit: number of hidden units
         """
         self.num_v_unit = num_v_unit
         self.num_h_unit = num_h_unit
@@ -26,23 +25,22 @@ class GaussianBernoulliRBM(object):
         # W: weight (dim num hidden * num visible)
         # B: biases of visible units(dim 1 * num visible)
         # C: biases of hidden units(dim 1 * num hidden)
-        # sigma: scalar or numpy array (dim 1 * visible units)
-
+        # sigma: numpy array (dim 1 * visible units)
         self.W = np.ones((self.num_h_unit, self.num_v_unit))
         self.B = np.ones((1, self.num_v_unit))
         self.C = np.ones((1, self.num_h_unit))
         self.Sigma = np.ones((1, self.num_v_unit))
 
-    def learning(self, train_data, max_epoch, sampling_times=1, mini_batch_size=10, sampling_type="CD",
+    def learning(self, train_data, max_epoch, mini_batch_size=10, sampling_type="CD", sampling_times=1,
                  learning_rate=0.01, momentum_rate=0, weight_decay_rate=0, sparse_regularization_target=0,
                  sparse_regularization_rate=0):
         """
 
         :param train_data:
         :param max_epoch:
-        :param sampling_times:
         :param mini_batch_size:
         :param sampling_type:
+        :param sampling_times:
         :param learning_rate:
         :param momentum_rate:
         :param weight_decay_rate:
@@ -50,18 +48,24 @@ class GaussianBernoulliRBM(object):
         :param sparse_regularization_rate:
         :return:
         """
+
+        # Model Parameters
         W = self.W
         B = self.B
         C = self.C
         Sigma = self.Sigma
 
-        # For momentum
+        # For Momentum
         delta_W = 0
         delta_B = 0
         delta_C = 0
+        delta_Sigma = 0
 
+        # For Sparse Regularization
         rho_new = 0
 
+        # train_data is supposed to be 2-d numpy array
+        # this method below will transform the array into 3-d numpy array
         mini_batch = make_mini_batch(train_data, mini_batch_size)
 
         learning_params = {"sampling_type": sampling_type,
@@ -70,12 +74,13 @@ class GaussianBernoulliRBM(object):
                            "momentum_rate": momentum_rate,
                            "weight_decay_rate": weight_decay_rate,
                            "sparse_regularization_target": sparse_regularization_target,
-                           "sparse_reglarization_rate": sparse_regularization_rate}
+                           "sparse_regularization_rate": sparse_regularization_rate}
 
-        # initialization of X_k
+        # no need for X_k to be equal to the fist mini_batch
+        # this is just for an initialization
         X_k = np.array(mini_batch[0])
 
-        # Contrastive Divergence Learning
+        # ENTRY of Contrastive Divergence Learning
         for e in tqdm.tqdm(range(0, max_epoch)):
             # Gibbs Sampling
             X = np.array(mini_batch[int(e % len(mini_batch))])
@@ -84,11 +89,16 @@ class GaussianBernoulliRBM(object):
                                  learning_params["sampling_times"])
 
             # Gradient Update
-            X, X_k, W, B, C, Sigma, delta_C, delta_B, delta_W, rho_new = gradient_update(X, X_k, W, B, C, Sigma,
-                                                                                         delta_C, delta_B, delta_W,
-                                                                                         rho_new, learning_params)
+            X, X_k, W, B, C, Sigma, delta_W, delta_B, delta_C, delta_Sigma, rho_new = gradient_update(X, X_k, W, B, C,
+                                                                                                      Sigma,
+                                                                                                      delta_W, delta_B,
+                                                                                                      delta_C,
+                                                                                                      delta_Sigma,
+                                                                                                      rho_new,
+                                                                                                      learning_params)
             # Non Negative Limitation
             W[W < 0] = 0
+        # END of Contrastive Divergence Learning
 
         # Learned Model Parameters
         self.W = W
@@ -125,6 +135,13 @@ class GaussianBernoulliRBM(object):
         """
         return self.W, self.B, self.C, self.Sigma
 
+    def get_W(self):
+        """
+
+        :return:
+        """
+        return self.W
+
 
 def make_mini_batch(data_list, mini_batch_size):
     """
@@ -139,6 +156,7 @@ def make_mini_batch(data_list, mini_batch_size):
     # mini batches will contain data with a different label at the almost same rate, statistically,
     # even when mini batches are made by extracting data from the top of the list 'data_array'
 
+    data_list = data_list.tolist()
     data_array_length = len(data_list)
     rest = data_array_length % mini_batch_size
 
@@ -148,47 +166,62 @@ def make_mini_batch(data_list, mini_batch_size):
     rest_batch = data_list[data_array_length - rest:] + data_list[0:mini_batch_size - rest]
     mini_batches.append(rest_batch)
 
-    return mini_batches
+    return np.array(mini_batches)
 
 
-def gradient_update(X, X_k, W_new, B_new, C_new, Sigma_new, delta_C, delta_B, delta_W, rho_new, learning_params):
+def gradient_update(X, X_k, W, B, C, Sigma, delta_W, delta_B, delta_C, delta_Sigma, rho_new, learning_params):
+    """
+
+    :param X:
+    :param X_k:
+    :param W:
+    :param B:
+    :param C:
+    :param Sigma:
+    :param delta_W:
+    :param delta_B:
+    :param delta_C:
+    :param delta_Sigma:
+    :param rho_new:
+    :param learning_params:
+    :return:
+    """
     learning_rate = learning_params["learning_rate"]
     sparse_regularization_target = learning_params["sparse_regularization_target"]
     sparse_regularization_rate = learning_params["sparse_regularization_rate "]
     momentum_rate = learning_params["momentum_rate"]
     weight_decay_rate = learning_params["weight_decay_rate "]
-    P_H_1_X = prob_H_1_X(X, C_new, W_new, Sigma_new)
-    P_H_1_X_k = prob_H_1_X(X_k, C_new, W_new, Sigma_new)
+
+    P_H_1_X = prob_H_1_X(X, W, C, Sigma)
+    P_H_1_X_k = prob_H_1_X(X_k, W, C, Sigma)
 
     rho_old = rho_new
-    C_old = C_new
-    B_old = B_new
-    # W_old = W_new * self.spread_funcs
-    W_old = W_new
-    Sigma_old = Sigma_new
+    W_old = W
+    B_old = B
+    C_old = C
+    Sigma_old = Sigma
 
     rho_new, grad_E_sparse_W, grad_E_sparse_C = sparse_regularization(X,
                                                                       W_old, C_old,
                                                                       Sigma_old, rho_old, sparse_regularization_target)
 
-    C_new = C_old + learning_rate * (CD_C(P_H_1_X, P_H_1_X_k)
-                                     - sparse_regularization_rate * grad_E_sparse_C) \
-            + momentum_rate * delta_C
+    C = C_old + learning_rate * (
+            CD_C(P_H_1_X, P_H_1_X_k) - sparse_regularization_rate * grad_E_sparse_C) + momentum_rate * delta_C
 
-    B_new = B_old + learning_rate * CD_B(X, X_k, Sigma_old) \
-            + momentum_rate * delta_B
+    B = B_old + learning_rate * CD_B(X, X_k, Sigma_old) + momentum_rate * delta_B
 
-    W_new = W_old + learning_rate * (CD_W(X, X_k, P_H_1_X, P_H_1_X_k,
-                                          Sigma_old) - weight_decay_rate * W_old - sparse_regularization_rate * grad_E_sparse_W) \
-            + momentum_rate * delta_W
+    W = W_old + learning_rate * (CD_W(X, X_k, P_H_1_X, P_H_1_X_k,
+                                      Sigma_old) - weight_decay_rate * W_old - sparse_regularization_rate * grad_E_sparse_W) + momentum_rate * delta_W
 
-    sigma_new = Sigma_old
+    Sigma = Sigma_old + learning_params * (CD_Sigma(X, X_k, P_H_1_X, P_H_1_X_k, W_old, B_old,
+                                                    Sigma_old) - weight_decay_rate * Sigma_old) + momentum_rate * delta_Sigma
 
-    delta_C = C_new - C_old
-    delta_B = B_new - B_old
-    delta_W = W_new - W_old
+    delta_W = W - W_old
+    delta_B = B - B_old
+    delta_C = C - C_old
+    delta_Sigma = Sigma - Sigma_old
 
-    return X, X_k, W_new, B_new, C_new, sigma_new, delta_C, delta_B, delta_W, rho_new
+    return X, X_k, W, B, C, Sigma, delta_W, delta_B, delta_C, delta_Sigma, rho_new
 
 
 def gibbs_sampling(X, X_k, W, B, C, Sigma, sampling_type, sampling_times):
@@ -196,10 +229,12 @@ def gibbs_sampling(X, X_k, W, B, C, Sigma, sampling_type, sampling_times):
 
     :param X:
     :param X_k:
-    :param C_new:
-    :param B_new:
-    :param W_new:
-    :param sigma_new:
+    :param W:
+    :param B:
+    :param C:
+    :param Sigma:
+    :param sampling_type:
+    :param sampling_times:
     :return:
     """
 
@@ -215,15 +250,12 @@ def gibbs_sampling(X, X_k, W, B, C, Sigma, sampling_type, sampling_times):
 def sparse_regularization(X, W, C, sigma, rho_old, sparse_regularization_target):
     """
 
-    :param sparse_regularization:
     :param X:
-    :param C:
     :param W:
+    :param C:
     :param sigma:
-    :param P_H_1_X:
-    :param H_X:
-    :param sparse_regularization_target:
     :param rho_old:
+    :param sparse_regularization_target:
     :return:
     """
 
@@ -267,20 +299,20 @@ def block_gibbs_sampling(X, W, B, C, sigma, sampling_times):
     return temp / sampling_times
 
 
-def prob_H_1_X(X, C, W, sigma):
+def prob_H_1_X(X, W, C, Sigma):
     """
     A row is a vector where i-th is the probability of h_i becoming 1 when given X
     :param X: values of visible (dim: num data * num visible units)
-    :param C: biases of hidden units(dim 1 * num hidden)
     :param W: weight (dim num hidden * num visible)
-    :param sigma: scalar or numpy array (dim 1 * visible units)
+    :param C: biases of hidden units(dim 1 * num hidden)
+    :param Sigma: scalar or numpy array (dim 1 * visible units)
     :return: numpy array (dim: num data * num hidden)
     """
 
     warnings.filterwarnings('error')
     try:
 
-        return 1 / (1 + np.exp(-C - (np.dot(X, np.transpose(W))) / (sigma * sigma)))
+        return 1 / (1 + np.exp(-C - (np.dot(X, np.transpose(W))) / (Sigma * Sigma)))
 
     except RuntimeWarning as warn:
 
@@ -300,17 +332,17 @@ def sampling_H_X(P_H_1):
                    np.zeros((P_H_1.shape[0], P_H_1.shape[1])))
 
 
-def sampling_X_H(H, B, W, sigma):
+def sampling_X_H(H, W, B, Sigma):
     """
     Gets samples of X following Gaussian distribution when given H
     :param H: values of hidden (dim: num data * num hidden)
-    :param B: biases of visible (dim: num data * num visible)
     :param W: weight (dim num hidden * num visible)
-    :param sigma: scalar or numpy array (dim 1 * visible units)
+    :param B: biases of visible (dim: num data * num visible)
+    :param Sigma: scalar or numpy array (dim 1 * visible units)
     :return: numpy array (dim: num data * num visible)
     """
 
-    return sigma * np.random.randn(H.shape[0], W.shape[1]) + B + np.dot(H, W)
+    return Sigma * np.random.randn(H.shape[0], W.shape[1]) + B + np.dot(H, W)
 
 
 def CD_C(P_H_1_X, P_H_1_X_k):
@@ -358,16 +390,16 @@ def CD_W(X, X_k, P_H_1_X, P_H_1_X_k, Sigma):
     return np.sum(E, axis=0) / (X.shape[0] * Sigma * Sigma)
 
 
-def CD_Sigma(X, X_k, P_H_1_X, P_H_1_X_k, B, W, Sigma):
+def CD_Sigma(X, X_k, P_H_1_X, P_H_1_X_k, W, B, Sigma):
     """
     Gradient approximation of sigma
     :param X: values of  visible (dim: num data * num visible units)
     :param X_k: values of sampled visible (dim: num data * num visible units)
     :param P_H_1_X: probability of H becoming 1 when given X
     :param P_H_1_X_k: probability of H becoming 1 when given X_k
-    :param B: array (dim: num_data, num_visible_units)
     :param W: weight (dim num hidden * num visible)
-    :param sigma: scalar or numpy array (dim 1 * visible units)
+    :param B: array (dim: num_data, num_visible_units)
+    :param Sigma: scalar or numpy array (dim 1 * visible units)
     :return: numpy array (dim: 1)
     """
     E_1_1 = np.sum(np.diag(np.dot((X - B), np.transpose((X - B)))), axis=0)
