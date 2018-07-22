@@ -2,6 +2,7 @@
 import numpy as np
 import tqdm
 from DBM.DBM.src.python3.Model import GBRBM
+import warnings
 
 
 class DeepBM(object):
@@ -19,13 +20,24 @@ class DeepBM(object):
     # somewhere with less matrix calculation or with too many "for" loops should be done by C/C++.
     # numpy is good at matrix calculation but runs too slowly inside "for" loop.
 
-    def __init__(self, num_v_unit, num_h_layer, num_h_unit):
-        self.num_v_unit = num_v_unit
-        self.num_h_layer = num_h_layer
-        self.num_h_unit = num_h_unit
+    def __init__(self, num_v_unit, num_h_unit):
+        """
 
-        self.W = np.ones((self.num_h_layer, self.num_h_unit, self.num_v_unit))
-        self.R = np.ones((self.num_h_layer, self.num_h_unit, self.num_v_unit))
+        :param num_v_unit:
+        :param num_h_unit:
+        """
+        self.num_v_unit = num_v_unit
+        self.num_h_unit = num_h_unit
+        self.num_h_layer = len(self.num_h_unit)
+
+        layers = [num_v_unit] + num_h_unit
+        self.w_list = []
+        self.r_list = []
+        for i in range(len(layers)):
+            if i < len(layers):
+                w = np.ones((layers[i + 1], layers[i]))
+                self.w_list.append(w)
+                self.r_list.append(w)
 
     # To Do: this code block below will control the whole learning process described in the article.
     def learning(self, train_data, max_epoch, max_epoch_rbm=50000, mini_batch_size=10, sampling_type="PCD",
@@ -79,8 +91,11 @@ class DeepBM(object):
         else:
             raise ArrNotMatchException("raise")
 
+    def re_construction(self):
+        pass
 
-def make_mini_batch(data_list, mini_batch_size):
+
+def __make_mini_batch(data_list, mini_batch_size):
     """
     makes mini bathes from list-type data_array
     :param data_list: 2-d list
@@ -106,7 +121,7 @@ def make_mini_batch(data_list, mini_batch_size):
     return np.array(mini_batches)
 
 
-def greedy_pre_training(num_v_unit, num_h_unit, train_data, max_epoch_rbm):
+def __greedy_pre_training(num_v_unit, num_h_unit, train_data, max_epoch_rbm):
     """
 
     :param num_v_unit:
@@ -129,12 +144,12 @@ def greedy_pre_training(num_v_unit, num_h_unit, train_data, max_epoch_rbm):
 
 
 # we can run this block without "for" loop, using a matrix calculation
-def variational_inference():
+def __variational_inference():
     pass
 
 
 # To Do: eq. (8)~(10)
-def sigmoid_activation(X):
+def __sigmoid_activation(X):
     """
 
     :param X:
@@ -144,7 +159,7 @@ def sigmoid_activation(X):
 
 
 # To Do: eq. (8)~(10)
-def calc_bottom_up_pass(R, V):
+def __calc_bottom_up_pass(R, V):
     """
 
     :param R:
@@ -169,7 +184,7 @@ def calc_bottom_up_pass(R, V):
 
 
 # To Do: eq. (4)~(6)
-def solve_mean_field_fixed_point_equation(W, V, mu, ite_K):
+def __solve_mean_field_fixed_point_equation(W, V, mu, ite_K):
     num_h_layer = W.shape[0]
     num_h_unit = W.shape[1]
     MU = []
@@ -186,16 +201,17 @@ def solve_mean_field_fixed_point_equation(W, V, mu, ite_K):
 
 
 # To Do: eq. (11)
-def calc_KL_divergence():
+def __calc_KL_divergence():
+    # use tensorflow
     pass
 
 
 # we can run this block without "for" loop, using a matrix calculation
-def stochastic_approximation():
+def __stochastic_approximation():
     gibbs_sampling()
 
 
-def gibbs_sampling(X, X_k, W, B, C, Sigma, sampling_type, sampling_times):
+def __gibbs_sampling(X, X_k, W, B, C, Sigma, sampling_type, sampling_times):
     """
 
     :param X:
@@ -218,7 +234,7 @@ def gibbs_sampling(X, X_k, W, B, C, Sigma, sampling_type, sampling_times):
     return X_k
 
 
-def block_gibbs_sampling(X, W, B, C, sigma, sampling_times):
+def __block_gibbs_sampling(X, W, B, C, sigma, sampling_times):
     """
     Block Gibbs Sampling
     :param X: values of visible (dim: num data * num visible units)
@@ -240,7 +256,7 @@ def block_gibbs_sampling(X, W, B, C, sigma, sampling_times):
     return temp / sampling_times
 
 
-def prob_H_1_X(X, W, C, Sigma):
+def __prob_H_1_X(X, W, C, Sigma):
     """
     A row is a vector where i-th is the probability of h_i becoming 1 when given X
     :param X: values of visible (dim: num data * num visible units)
@@ -262,7 +278,7 @@ def prob_H_1_X(X, W, C, Sigma):
         return np.zeros((X.shape[0], W.shape[0]))
 
 
-def sampling_H_X(P_H_1):
+def __sampling_H_X(P_H_1):
     """
     Gets samples of H following Bernoulli distribution when given X
     :param P_H_1: probability of H becoming 1 when given X
@@ -273,7 +289,7 @@ def sampling_H_X(P_H_1):
                    np.zeros((P_H_1.shape[0], P_H_1.shape[1])))
 
 
-def sampling_X_H(H, W, B, Sigma):
+def __sampling_X_H(H, W, B, Sigma):
     """
     Gets samples of X following Gaussian distribution when given H
     :param H: values of hidden (dim: num data * num hidden)
@@ -286,7 +302,7 @@ def sampling_X_H(H, W, B, Sigma):
     return Sigma * np.random.randn(H.shape[0], W.shape[1]) + B + np.dot(H, W)
 
 
-def parameter_update():
+def __parameter_update():
     pass
 
 
@@ -295,7 +311,7 @@ def calc_gradient():
     pass
 
 
-def decrease_learning_rate(learning_rate, current_epoch, max_epoch, target):
+def __decrease_learning_rate(learning_rate, current_epoch, max_epoch, target):
     """
 
     :param learning_rate:
@@ -308,6 +324,6 @@ def decrease_learning_rate(learning_rate, current_epoch, max_epoch, target):
     return learning_rate * rate
 
 
-class ArrNotMatchException(Exception):
+class __ArrNotMatchException(Exception):
     def my_func(self):
         print("Array size does not match the vector size of h and v units")
